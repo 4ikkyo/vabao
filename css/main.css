@@ -3351,9 +3351,10 @@ button {
     font-family   : 'Nunito';
     font-style    : normal;
     font-weight   : 800;
-    font-size     : 42px;
-    line-height   : 57px;
+    font-size     : clamp(18px, 3vw, 42px);
+    line-height   : clamp(25px, 3vw, 57px);
     letter-spacing: 0.02em;
+    white-space   : nowrap;
 }
 
 .support__search {
@@ -3365,7 +3366,7 @@ button {
 }
 
 .support__search input {
-    width        : 801px;
+    width        : clamp(352px, 56vw, 801px);
     height       : 45px;
     padding      : 14px 140px 14px 70px;
     font-style   : normal;
@@ -3390,7 +3391,7 @@ button {
 }
 
 .support__search>a {
-    width        : 155px;
+    width        : clamp(94px, 12vw, 155px);
     height       : 45px;
     background   : #5189F5;
     border       : 2px solid #5189F5;
@@ -3400,9 +3401,12 @@ button {
 }
 
 .support__container>img {
-    width : 257px;
-    height: 257px;
+    width      : 257px;
+    height     : 257px;
+    margin-left: clamp(50px, 8vw, 155px);
 }
+
+.support-head {}
 
 .sections {
     background   : #ECF2FF;
@@ -3412,19 +3416,21 @@ button {
 
 .sections__container {
     display              : grid;
-    grid-template-columns: repeat(auto-fill, min(388px));
-    grid-row-gap         : 35px;
+    /* grid-template-columns: repeat(auto-fill, minmax(clamp(356px, 40vw, 388px), 1fr)); */
+    grid-template-columns: repeat(auto-fill, min(clamp(356px, 40vw, 388px)));
+    grid-row-gap         : clamp(21px, 2.5vw, 35px);
     grid-column-gap      : 32px;
     justify-content      : center;
     margin               : 0 auto !important;
+    justify-items        : center;
 }
 
 .sections__container>div {
     background     : #FFFFFF;
     box-shadow     : 0px 10px 65px rgba(12, 50, 123, 0.06);
     border-radius  : 15px;
-    height         : 148px;
-    width          : 388px;
+    height         : clamp(121px, 12vw, 148px);
+    width          : clamp(356px, 40vw, 388px);
     display        : flex;
     align-items    : center;
     justify-content: space-around;

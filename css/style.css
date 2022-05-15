@@ -207,8 +207,8 @@ option {
     align-items    : center;
     justify-content: center;
     font-weight    : 400;
-    font-size      : 20px;
-    line-height    : 27px;
+    font-size      : clamp(14px, 1.5vw, 20px);
+    line-height    : clamp(19px, 1.5vw, 27px);
 }
 
 .sticky-list dd {
@@ -230,31 +230,33 @@ option {
 
 .subtitle-game {
     display              : grid;
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(2, clamp(90px, 9vw, 120px));
 }
 
 .subtitle-game>a {
     font-family  : 'Nunito';
     font-style   : normal;
     font-weight  : 400;
-    font-size    : 20px;
-    line-height  : 27px;
+    font-size    : clamp(15px, 1.5vw, 20px);
+    line-height  : clamp(22px, 1.5vw, 27px);
     margin-bottom: 7px;
     color        : #3878F4;
 }
 
 .title-game {
-    margin-left          : 35px;
+    margin-left          : clamp(5px, 1.5vw, 35px);
     display              : grid;
     grid-template-columns: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, clamp(155px, 20vw, 240px));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(155px, 15vw, 240px), 1fr));
 }
 
 .title-game>dd>h1 {
     font-family: 'Nunito';
     font-style : normal;
     font-weight: 600;
-    font-size  : 27px;
-    line-height: 37px;
+    font-size  : clamp(19px, 1.5vw, 27px);
+    line-height: clamp(30px, 1.5vw, 37px);
 }
 
 

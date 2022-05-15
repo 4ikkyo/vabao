@@ -561,7 +561,7 @@
                                         <div class="value" id="value"></div>
                                     </div>
                                     <input id="range1" class="input-range sort-range" type="range" list="tickmarks"
-                                        max="38">
+                                        max="38" value="0">
 
 
                                     <datalist class="data" id="tickmarks">
@@ -2731,34 +2731,26 @@
     <script>
         var data = document.getElementsByClassName('data')[0].getElementsByTagName('option');
 
-        var word = document.getElementsByClassName('word')[0];
+        var New = document.getElementById('New');
 
-        var list = document.querySelectorAll('#New, .sticky-list #A, #B, #C, #D, #E, #F, #G, #H');
+        var dl = document.getElementsByClassName('sticky-list')[0];
 
-        for (var i = 0; i < list.length; ++i) {
-            list[i].setAttribute('style', 'display: block');
-        }
-
-        console.log(list);
+        New.setAttribute('style', 'display: block');
+        dl.setAttribute('style', 'display: none');
 
         var range = document.getElementsByClassName('input-range')[0];
-        value = document.getElementsByClassName('range-value')[0];
 
-        range.addEventListener('input', function () {
-            for (var i = 0; i < list.length; ++i) {
-                list[i].setAttribute('style', 'display: block');
-            }
-            for (var i = 0; i < data.length; ++i) {
-                if (data[i].value == this.value) {
-                    for (var j = 0; j < list.length; ++j) {
-                        if (data[i].textContent == list[j].id) {
-                            // list[j].setAttribute('style', 'display: block')
-                            location.href = "#A";
-                        }
+        range.addEventListener('change', function () {
+            if (this.value == '0') {
+                New.setAttribute('style', 'display: block');
+                dl.setAttribute('style', 'display: none');
+            } else {
+                New.setAttribute('style', 'display: none');
+                dl.setAttribute('style', 'display: block');
+                for (var i = 0; i < data.length; ++i) {
+                    if (data[i].value == this.value) {
+                        location.href = "#" + data[i].textContent;
                     }
-                    console.log(data[i].textContent);
-                    //word.value = data[i].textContent;
-                    break;
                 }
             }
         }); 
@@ -2773,15 +2765,15 @@
         const option = document.querySelector(".data > option");
 
         slide.oninput = function () {
-			window.navigator.vibrate(20);
-			var screenHeight = window.screen.height;
-			var u = screenHeight * 85 / 100 / 39
-			console.log(u);
+            window.navigator.vibrate(20);
+            var screenHeight = window.screen.height;
+            var u = screenHeight * 85 / 100 / 39
+            console.log(u);
             //sliderval.style.width = option.clientWidth / 2;
             //x = 100 / 39;
             //sliderval.style.top = "calc(" + x * slide.value + "% - 35px)";
-			//sliderval.style.top = "calc(" + u * slide.value + "px - 40px)";
-			sliderval.style.top = "calc((85vh / 39 *" + slide.value + ") - 40px)";
+            //sliderval.style.top = "calc(" + u * slide.value + "px - 40px)";
+            sliderval.style.top = "calc((85vh / 39 *" + slide.value + ") - 40px)";
             for (var i = 0; i < data.length; ++i) {
                 if (data[i].value == slide.value) {
                     value.innerHTML = data[i].textContent;
