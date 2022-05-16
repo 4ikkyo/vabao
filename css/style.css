@@ -59,7 +59,7 @@
     justify-content           : center;
     transition                : 0.1s ease;
     display                   : none;
-    transform              : rotate(90deg);
+    transform                 : rotate(90deg);
 }
 
 .value {

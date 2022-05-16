@@ -38,9 +38,10 @@
 }
 
 .ads__text {
-    margin-right: 20px;
-    overflow    : hidden;
-    max-height  : 72px;
+    margin-right : 20px;
+    overflow     : hidden;
+    max-height   : 72px;
+    text-overflow: ellipsis;
 }
 
 .column__info {
@@ -3201,6 +3202,7 @@
         bottom  : 0;
         margin  : auto;
         height  : 85vh;
+        z-index : 1;
     }
 
     .slidervalue {
@@ -3340,6 +3342,10 @@
 }
 
 @media screen and (max-width: 992px) {
+    option {
+        color: #546EFF;
+    }
+
     .open1 .orderopen__row-details1 {
         padding-left: 23px;
     }
