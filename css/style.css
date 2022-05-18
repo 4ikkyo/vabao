@@ -3105,6 +3105,39 @@ li {
 /* 768px - 992px */
 
 @media screen and (max-width: 992px) {
+    .sections {
+        background   : none;
+        padding      : 30px 0;
+        margin-bottom: 28px;
+    }
+
+    .sections::before {
+        content   : "";
+        top       : 0;
+        height    : 130px;
+        z-index   : -1;
+        width     : 100%;
+        background: #ECF2FF;
+        position  : absolute;
+    }
+
+    .support-head>h1 {
+        text-align: center;
+    }
+
+    .support__search {
+        height    : 37px;
+        margin-top: 26px;
+    }
+
+    .FAQ__container {
+        width: 95% !important;
+    }
+
+    .sections__container {
+        width: 95% !important;
+    }
+
     .container {
         width: 85%;
     }
@@ -3259,6 +3292,10 @@ li {
 /* 576px - 768px */
 
 @media screen and (max-width: 768px) {
+    .sections__container {
+        width: 95% !important;
+    }
+
     .container {
         width        : 85%;
         margin-bottom: 240px;
@@ -3474,6 +3511,10 @@ li {
 /* 434px - 576px */
 
 @media screen and (max-width: 576px) {
+    .FAQ__container {
+        width: 95% !important;
+    }
+
     .container {
         width        : 90%;
         margin-bottom: 140px;

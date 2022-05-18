@@ -3363,11 +3363,12 @@ button {
     display      : flex;
     align-items  : center;
     width        : min-content;
+    height       : 45px;
 }
 
 .support__search input {
     width        : clamp(352px, 56vw, 801px);
-    height       : 45px;
+    height       : 100%;
     padding      : 14px 140px 14px 70px;
     font-style   : normal;
     font-weight  : normal;
@@ -3378,6 +3379,10 @@ button {
     border       : 2px solid rgba(0, 86, 255, 0.5);
     box-sizing   : border-box;
     border-radius: 777px;
+}
+
+.support__search>.button_a {
+    height: 100%;
 }
 
 .support__search::before {
@@ -3412,17 +3417,19 @@ button {
     background   : #ECF2FF;
     padding      : 50px 0;
     margin-bottom: 70px;
+    position     : relative;
 }
 
 .sections__container {
-    display              : grid;
+    display                 : grid;
     /* grid-template-columns: repeat(auto-fill, minmax(clamp(356px, 40vw, 388px), 1fr)); */
-    grid-template-columns: repeat(auto-fill, min(clamp(356px, 40vw, 388px)));
-    grid-row-gap         : clamp(21px, 2.5vw, 35px);
-    grid-column-gap      : 32px;
-    justify-content      : center;
-    margin               : 0 auto !important;
-    justify-items        : center;
+    grid-template-columns   : repeat(auto-fill, min(clamp(356px, 40vw, 388px)));
+    grid-row-gap            : clamp(21px, 2.5vw, 35px);
+    grid-column-gap         : clamp(10px, 2vw, 32px);
+    ;
+    justify-content: center;
+    margin         : 0 auto !important;
+    justify-items  : center;
 }
 
 .sections__container>div {
@@ -3467,18 +3474,17 @@ button {
     font-family   : 'Nunito';
     font-style    : normal;
     font-weight   : 700;
-    font-size     : 42px;
-    line-height   : 57px;
+    font-size     : clamp(25px, 4vw, 42px);
     letter-spacing: 0.02em;
     margin        : 0;
-    margin-bottom : 62px;
+    margin-bottom : clamp(45px, 5vw, 62px);
 }
 
 .questions {
     display              : grid;
-    grid-template-columns: repeat(auto-fill, min(388px));
+    grid-template-columns: repeat(auto-fill, min(clamp(356px, 40vw, 388px)));
     grid-row-gap         : 35px;
-    grid-column-gap      : 32px;
+    grid-column-gap      : clamp(10px, 2vw, 32px);
     justify-content      : center;
     margin               : 0 auto !important;
 }
