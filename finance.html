@@ -1,150 +1,430 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Финансы</title>
-	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
 	<meta name="Keywords" content="keyword, keyword, keyword">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
-			<link rel="stylesheet" href="css/update.css">
-				<link rel="stylesheet" type="text/css" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/update.css">
+	<link rel="stylesheet" type="text/css" href="css/nice-select.css">
 
+	<style>
+		body {
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+	</style>
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
 </head>
+
 <body>
-<div class="bg-layer"></div>
+	<div class="bg-layer"></div>
 	<div class="wrapper">
-		
+
 		<!-- Header Start-->
-	<header id="header" class="header d-flex align-items-center header-false">
-		<div class="header__container max-container d-flex align-items-center space-between">
-			<div class="header__left-nav d-flex align-items-center">
-				<div class="header__menu-burger menu-burger-add d-flex align-items-center">
-					<span></span>
+		<header id="header" class="header d-flex align-items-center header-false">
+			<div class="header__container max-container d-flex align-items-center space-between">
+				<div class="header__left-nav d-flex align-items-center">
+					<div class="header__menu-burger menu-burger-add d-flex align-items-center">
+						<span></span>
+					</div>
+					<div class="header__menu-burger menu-burger-smart d-flex align-items-center">
+						<span></span>
+					</div>
+					<ul class="header__menu d-flex align-items-center">
+						<li class="notmobile"><a href="#">О сервисе</a></li>
+						<li><a href="ads.html">Купить</a></li>
+						<li><a href="rules.html">Продать</a></li>
+					</ul>
 				</div>
-				<div class="header__menu-burger menu-burger-smart d-flex align-items-center">
-					<span></span>
-				</div>
-				<ul class="header__menu d-flex align-items-center">
-					<li><a href="index.html">О сервисе</a></li>
-					<li><a href="ads.html">Купить</a></li>
-					<li><a href="rules.html">Продать</a></li>
-				</ul>
-			</div>
-			<div class="header__logo">
-				<a href="index.html">
-					<img src="img/svg/logo.svg" alt="logo">
-				</a>
-			</div>
-					<div class="header__smart-menu smart-menu">
-			<div class="header__smart-menu_lining"></div>
-			<div class="smart-menu__wrapper">
-				<div class="header__menu-burger menu-burger-smart d-flex align-items-center">
-					<span></span>
-				</div>
-				<ul>
-					<li><a href="#">О сервисе</a></li>
-					<li><a href="ads.html">Купить</a></li>
-					<li><a href="rules.html">Продать</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Отзывы</a></li>
-					<li><a href="#">Блог</a></li>
-					<li><a href="rules.html">Правила</a></li>
-					<li><a href="request.html">Тех. поддержка</a></li>
-				</ul>
-			</div>
-		</div>
-			<div class="header__right-nav d-flex align-items-center">
-				<div class="header__rules">
-					<a href="rules.html">Правила</a>
-				</div>
-				<div class="header__search">
-					<button>
-						<svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect x="0.52841" y="0.0451008" width="0.75" height="7.35313" rx="0.375" transform="matrix(0.76468 -0.64441 0.644412 0.764678 12.0483 14.5078)" stroke="#323232" stroke-width="0.75"/>
-						<rect x="0.75" y="0.86972" width="14.5" height="14.5" rx="7.25" stroke="#323232" stroke-width="1.5"/>
-						</svg>
-					</button>
-				</div>
-				<div class="header__support">
-					<a href="#">
-						<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M5.05414 16.25H0.804138V0.75H16.3041V16.25H12.0541H11.7767L11.566 16.4306L8.55414 19.0122L5.54223 16.4306L5.33158 16.25H5.05414Z" stroke="#323232" stroke-width="1.5"/>
-						<path d="M7 5.49544C9.02481 4.43288 10.4387 5.20945 10.5 6.59542C10.5613 7.9814 8.71662 8.11232 8.5 9.19544C8.42341 9.57838 8.45 9.69543 8.45 9.69543" stroke="#323232" stroke-width="1.7" stroke-linecap="round"/>
-						<circle cx="8.42498" cy="12.325" r="0.5" stroke="#323232" stroke-width="1"/>
-						</svg>
+				<div class="header__logo">
+					<a href="index.html">
+						<img src="img/svg/logo2.svg" alt="logo">
 					</a>
 				</div>
-				<div class="header__account header__account__logo_user">
-					<button>
-						<img src="img/svg/user_icon.svg" alt="user_logo">
-					</button>
+				<div class="header__right-nav d-flex align-items-center">
+		
+					<div class="header__balance">
+						<a>1000 руб</a>
+					</div>
+		
+					<div class="header__bell menu-bell-add">
+						<div class="circle-bell">1</div>
+						<!-- Круг с числом уведомлений -->
+						<button>
+							<svg width="23" height="23" viewBox="0 0 23 23" fill="black"
+								xmlns="http://www.w3.org/2000/svg">
+								<!-- Знак колокольчика -->
+								<path
+									d="M 10.578125 1.464844 C 7.515625 1.910156 5.207031 4.019531 4.457031 7.050781 L 4.34375 7.523438 L 4.3125 10.738281 C 4.285156 13.914062 4.277344 14.058594 4.128906 14.335938 C 4.0625 14.460938 3.027344 15.957031 2.78125 16.285156 C 2.164062 17.101562 2.402344 18.164062 3.296875 18.578125 L 3.527344 18.6875 L 7.941406 18.6875 L 8.039062 19.011719 C 9.074219 22.410156 13.933594 22.414062 14.960938 19.011719 L 15.058594 18.6875 L 19.472656 18.6875 L 19.703125 18.578125 C 20.597656 18.164062 20.835938 17.105469 20.21875 16.285156 C 19.972656 15.957031 18.9375 14.460938 18.871094 14.335938 C 18.722656 14.058594 18.714844 13.914062 18.6875 10.738281 L 18.65625 7.523438 L 18.542969 7.050781 C 17.847656 4.242188 15.859375 2.253906 13.074219 1.585938 C 12.613281 1.476562 11.03125 1.398438 10.578125 1.464844 M 12.488281 2.996094 C 14.5625 3.34375 16.316406 4.882812 16.953125 6.910156 C 17.210938 7.734375 17.21875 7.804688 17.246094 11.207031 C 17.28125 15.035156 17.167969 14.53125 18.386719 16.285156 L 19.046875 17.226562 L 15.273438 17.238281 C 13.199219 17.246094 9.800781 17.246094 7.726562 17.238281 L 3.957031 17.226562 L 4.628906 16.261719 C 5.3125 15.289062 5.492188 14.988281 5.640625 14.578125 C 5.71875 14.371094 5.726562 14.109375 5.753906 11.207031 C 5.777344 8.53125 5.792969 8.003906 5.855469 7.660156 C 6.445312 4.503906 9.34375 2.464844 12.488281 2.996094 M 13.453125 18.789062 C 13.308594 19.265625 12.667969 19.839844 12.085938 20.007812 C 11.097656 20.296875 9.816406 19.679688 9.546875 18.789062 L 9.515625 18.6875 L 13.484375 18.6875 L 13.453125 18.789062 ">
+								</path>
+							</svg>
+						</button>
+		
+					</div>
+					<div class="header__search">
+						<button>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="black"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M 7.5 0.0234375 C 2.234375 0.679688 -1.132812 5.738281 0.328125 10.804688 C 1.554688 15.0625 6.019531 17.648438 10.371094 16.621094 C 11.480469 16.359375 12.910156 15.667969 13.632812 15.046875 L 13.769531 14.925781 L 16.269531 17.421875 C 18.992188 20.136719 18.863281 20.023438 19.296875 19.992188 C 19.726562 19.960938 20 19.660156 20 19.226562 C 20 18.847656 20.023438 18.875 17.402344 16.25 L 14.925781 13.769531 L 15.046875 13.632812 C 15.289062 13.347656 15.753906 12.597656 15.996094 12.101562 C 18.429688 7.050781 15.4375 1.164062 9.90625 0.113281 C 9.484375 0.03125 7.90625 -0.0234375 7.5 0.0234375 M 9.453125 1.664062 C 14.574219 2.449219 16.976562 8.441406 13.828125 12.578125 C 10.734375 16.640625 4.339844 15.917969 2.214844 11.265625 C -0.0429688 6.335938 4.09375 0.847656 9.453125 1.664062 ">
+								</path>
+							</svg>
+						</button>
+					</div>
+					<div class="header__support">
+						<a href="request.html">
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="black"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M 19.984375 1.726562 C 19.902344 1.75 18.90625 2.125 17.769531 2.558594 C -0.960938 9.707031 0.648438 9.078125 0.335938 9.378906 C -0.289062 9.984375 -0.03125 10.894531 0.867188 11.273438 C 1.015625 11.335938 2.015625 11.640625 3.089844 11.945312 C 4.160156 12.25 5.042969 12.507812 5.046875 12.511719 C 5.050781 12.519531 5.535156 13.898438 6.121094 15.574219 C 6.703125 17.253906 7.234375 18.722656 7.296875 18.839844 C 7.828125 19.816406 8.992188 20.085938 9.894531 19.4375 C 10.019531 19.351562 10.65625 18.785156 11.316406 18.179688 C 11.972656 17.574219 12.523438 17.074219 12.539062 17.070312 C 12.554688 17.066406 13.371094 17.707031 14.351562 18.5 C 16.246094 20.027344 16.507812 20.203125 17.007812 20.285156 C 17.734375 20.398438 18.410156 20.023438 18.738281 19.316406 C 18.980469 18.800781 22.007812 3.730469 21.988281 3.136719 C 21.957031 2.046875 21.058594 1.417969 19.984375 1.726562 M 20.667969 3.238281 C 20.667969 3.460938 17.648438 18.417969 17.546875 18.683594 C 17.351562 19.207031 17.445312 19.265625 13.75 16.289062 C 12.035156 14.910156 10.632812 13.777344 10.628906 13.777344 C 10.625 13.773438 12.144531 12.152344 14.003906 10.175781 C 15.867188 8.199219 17.414062 6.523438 17.445312 6.449219 C 17.574219 6.132812 17.386719 5.6875 17.074219 5.585938 C 16.761719 5.480469 16.675781 5.519531 13.75 7.015625 C 6.679688 10.632812 5.53125 11.214844 5.484375 11.214844 C 5.410156 11.21875 1.71875 10.164062 1.71875 10.140625 C 1.71875 10.128906 3.957031 9.265625 6.691406 8.21875 C 9.429688 7.175781 13.601562 5.582031 15.960938 4.679688 C 21.074219 2.726562 20.667969 2.851562 20.667969 3.238281 M 13.527344 8.710938 C 13.46875 8.777344 12.445312 9.863281 11.257812 11.125 C 10.070312 12.390625 9.074219 13.484375 9.039062 13.554688 C 9.007812 13.625 8.796875 14.441406 8.570312 15.363281 C 8.347656 16.28125 8.148438 17.070312 8.132812 17.113281 C 8.109375 17.164062 7.820312 16.390625 7.242188 14.730469 C 6.769531 13.378906 6.402344 12.265625 6.425781 12.257812 C 6.449219 12.25 8.070312 11.425781 10.035156 10.421875 C 11.996094 9.417969 13.609375 8.597656 13.617188 8.59375 C 13.628906 8.59375 13.589844 8.648438 13.527344 8.710938 M 10.753906 15.601562 C 11.136719 15.910156 11.453125 16.175781 11.457031 16.191406 C 11.460938 16.207031 10.960938 16.683594 10.347656 17.246094 C 9.730469 17.8125 9.238281 18.238281 9.25 18.191406 C 9.261719 18.148438 9.445312 17.421875 9.652344 16.574219 C 9.859375 15.730469 10.039062 15.039062 10.046875 15.039062 C 10.054688 15.039062 10.371094 15.292969 10.753906 15.601562 ">
+								</path>
+							</svg>
+						</a>
+					</div>
+					<!-- <div class="header__account-login">
+						<button>
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="black"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M 8.949219 0.34375 C 6.679688 0.839844 5.480469 2.824219 5.796875 5.546875 C 6.117188 8.285156 7.613281 9.714844 10.175781 9.71875 C 12.789062 9.726562 14.214844 8.039062 14.222656 4.925781 C 14.226562 2.402344 13.210938 0.847656 11.25 0.375 C 10.722656 0.246094 9.46875 0.230469 8.949219 0.34375 M 10.726562 1.824219 C 12.085938 2.113281 12.722656 3.097656 12.722656 4.925781 C 12.722656 7.015625 11.90625 8.144531 10.324219 8.234375 C 8.367188 8.347656 7.136719 6.835938 7.265625 4.476562 C 7.367188 2.53125 8.816406 1.421875 10.726562 1.824219 M 6.8125 10.300781 C 6.75 10.328125 6.457031 10.488281 6.164062 10.65625 C 5.484375 11.050781 4.371094 11.585938 3.511719 11.929688 C 2.734375 12.242188 2.554688 12.367188 2.347656 12.726562 C 1.730469 13.804688 1.535156 16.601562 2.015625 17.410156 C 3.347656 19.636719 10.746094 20.480469 15.449219 18.941406 C 17.925781 18.132812 18.535156 17.15625 18.171875 14.601562 C 17.9375 12.945312 17.574219 12.398438 16.425781 11.972656 C 15.789062 11.738281 14.40625 11.070312 13.601562 10.609375 C 12.929688 10.21875 12.746094 10.175781 12.421875 10.332031 C 12.074219 10.492188 11.929688 11.050781 12.136719 11.410156 C 12.339844 11.753906 14.757812 13.003906 16.214844 13.515625 C 16.550781 13.636719 16.875 15.527344 16.703125 16.359375 C 16.472656 17.464844 12.257812 18.445312 8.773438 18.203125 C 6.445312 18.042969 4.089844 17.402344 3.425781 16.746094 L 3.273438 16.597656 L 3.277344 15.738281 C 3.277344 13.988281 3.421875 13.605469 4.179688 13.304688 C 5.507812 12.777344 7.507812 11.71875 7.710938 11.433594 C 8.132812 10.84375 7.488281 10.03125 6.8125 10.300781 " />
+							</svg>
+						</button>
+					</div> -->
+					<div class="header__account-menu header__account__logo_user">
+						<button>
+							<img src="img/svg/user_icon.svg" alt="user_logo" width="28" height="28">
+						</button>
+					</div>
 				</div>
-
+		
+				<!-- <div class="header__separator"></div> -->
+		
+				<div
+					class="header__container header__container_search max-container d-flex align-items-center space-between">
+					<div class="header__search-line search-line d-flex align-items-center">
+						<form action="/" class="search-line__search">
+							<input type="text" placeholder="Поиск">
+							<button>
+								<svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<rect x="0.52841" y="0.0451008" width="0.75" height="7.35313" rx="0.375"
+										transform="matrix(0.76468 -0.64441 0.644412 0.764678 12.0483 14.5078)"
+										stroke="#323232" stroke-width="0.75" />
+									<rect x="0.75" y="0.86972" width="14.5" height="14.5" rx="7.25" stroke="#323232"
+										stroke-width="1.5" />
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+		
+				<div class="header__smart-menu smart-menu">
+					<div class="header__smart-menu_lining"></div>
+					<div class="smart-menu__wrapper">
+						<div class="header__menu-burger menu-burger-smart d-flex align-items-center">
+							<span></span>
+						</div>
+						<ul>
+							<li><a href="#">О сервисе</a></li>
+							<li><a href="ads.html">Купить</a></li>
+							<li><a href="rules.html">Продать</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Правила</a></li>
+							<li><a href="request.html">Тех. поддержка</a></li>
+						</ul>
+					</div>
+				</div>
+		
+				<div class="header__search-form search-form invisible">
+					<div class="search-form__lining invisible"></div>
+					<div class="search-form__wrapper">
+						<form action="/">
+							<div class="search-form__cross">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+										transform="rotate(-45 0.305603 12.5424)" fill="#323232" />
+									<rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+										fill="#323232" />
+								</svg>
+							</div>
+							<div class="search-form__search">
+								<input type="text" placeholder="Поиск">
+								<button>
+									<svg width="19" height="21" viewBox="0 0 19 21" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.52841" y="0.0451008" width="0.75" height="7.35313" rx="0.375"
+											transform="matrix(0.76468 -0.64441 0.644412 0.764678 12.0483 14.5078)"
+											stroke="#323232" stroke-width="0.75" />
+										<rect x="0.75" y="0.86972" width="14.5" height="14.5" rx="7.25" stroke="#323232"
+											stroke-width="1.5" />
+									</svg>
+								</button>
+							</div>
+							<div class="search-form__extradition">
+								<h5>Популярные запросы</h5>
+								<ul>
+									<li><a href="#">Длинное название игры</a></li>
+									<li><a href="#">Самое длинное название игры игры</a></li>
+									<li><a href="#">Название игры</a></li>
+									<li><a href="#">Обычное название игры</a></li>
+									<li><a href="#">Длинное название игры</a></li>
+									<li><a href="#">Самое длинное название игры игры</a></li>
+									<li><a href="#">Название игры</a></li>
+									<li><a href="#">Обычное название игры</a></li>
+								</ul>
+							</div>
+						</form>
+					</div>
+				</div>
+		
+				<div class="header__logIn-form logIn-form invisible">
+					<div class="logIn-form__lining invisible"></div>
+					<div class="logIn-form__wrapper">
+						<div class="logIn-form__cross">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+									transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+								<rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+									fill="#323232">
+								</rect>
+							</svg>
+						</div>
+						<form action="/" class="logIn-form__logIn d-flex align-items-center space-between">
+							<h3>Войдите в аккаунт</h3>
+							<div style="padding-top:30px; width:100%">
+								<input type="text" name="email" placeholder="Почта" style="width:100%">
+								<input type="password" name="password" placeholder="Пароль" style="width:100%">
+							</div>
+							<div class="logIn-form__remember d-flex align-items-center space-between">
+								<input type="checkbox" class="logIn-form__checkbox" id="logIn-form__checkbox">
+								<label for="logIn-form__checkbox" class="logIn-form__label">Запомнить пароль</label>
+								<span class="logIn-form__forgot">Забыли пароль?</span>
+							</div>
+							<button type="submit" class="logIn-form__button button">Войти</button>
+							<p class="logIn-form__or-continue">или продолжить через</p>
+							<div class="logIn-form__social-networks">
+								<button class="logIn-form__facebook"></button>
+								<button class="logIn-form__vk"></button>
+								<button class="logIn-form__instagram"></button>
+								<button class="logIn-form__pinterest"></button>
+							</div>
+		
+						</form>
+						<div class="logIn-form__separator"></div>
+						<div class="logIn-form__register d-flex align-items-center space-between">
+							<a href="#" class="vop logIn-form__button_r">Зарегестрироваться</a>
+						</div>
+					</div>
+				</div>
+		
+				<div class="header__register-form register-form">
+					<div class="register-form__lining"></div>
+					<div class="register-form__wrapper">
+						<div class="register-form__cross">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+									transform="rotate(-45 0.305603 12.5424)" fill="#323232" />
+								<rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+									fill="#323232" />
+							</svg>
+						</div>
+						<form action="/" class="register-form__register d-flex align-items-center space-between">
+							<h3>Создайте аккаунт</h3>
+							<p>Заполните все формы ниже, чтобы зарегистрировать аккаунт</p>
+							<input type="text" name="name" placeholder="Имя">
+							<input type="text" name="login" placeholder="Логин">
+							<input type="text" name="email" placeholder="Почта">
+							<input type="text" name="password" placeholder="Пароль">
+							<div class="register-form__protect">
+								<div class="low"></div>
+								<div class="middle"></div>
+								<div class="strong"></div>
+							</div>
+							<input type="password" name="confirm-password" placeholder="Подтвердите пароль">
+							<div class="register-form__policy">
+								<input type="checkbox" class="register-form__checkbox" id="register-form__checkbox">
+								<label for="register-form__checkbox" class="register-form__label">Я прочитал и
+									согласен
+									с <a href="license.html"
+										style="color: #8E8E8E; text-decoration-skip-ink: none"><u>политикой
+											конфиденциальности, обработки данных и агентским
+											договором</u></a></label>
+							</div>
+							<button type="submit" class="register-form__button button-o">Зарегестрировать</button>
+						</form>
+					</div>
+				</div>
+		
+				<div class="header__pass-remember-form pass-remember-form">
+					<div class="pass-remember-form__lining"></div>
+					<div class="pass-remember-form__wrapper">
+						<div class="pass-remember-form__cross">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+									transform="rotate(-45 0.305603 12.5424)" fill="#323232" />
+								<rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+									fill="#323232" />
+							</svg>
+						</div>
+						<form action="/" class="pass-remember-form__form d-flex align-items-center space-between">
+							<h3>Забыли пароль?</h3>
+							<p>Введите адрес электронной почты, который вы используете для моей учетной записи, и вы
+								получите письмо, содержащее ссылку для изменения пароля</p>
+							<input type="text" name="email" placeholder="Почта">
+							<button type="submit" class="pass-remember-form__button button">Отправить</button>
+						</form>
+					</div>
+				</div>
 			</div>
-
-
-			<div class="header__additional-menu">
-				<ul class="d-flex ">
-                    <li class="text-align-center pb pb20"><a href="request.html">Тех.поддержка</a></li>
-                    <li class="text-align-center pb pb10"><a href="#">Оставить отзыв</a></li>
-
-                </ul>    
-                    <div class="header__additional-menu__social">
-                    	<ul>
-                        <li class="social social__inst"><a href="#"><img src="img/svg/inst.svg" alt=""></a></li>
-						<li class="social"><a href="#"><img src="img/svg/vk2.svg" alt=""></a></li>
-                        <li class="social"><a href="#"><img src="img/svg/fb.svg" alt=""></a></li>
-                        </ul>
-                    </div>
+			<div class="header__open-dispute open-dispute invisible">
+				<div class="open-dispute__lining invisible"></div>
+				<div class="open-dispute__wrapper">
+					<form action="/">
+						<div class="open-dispute__cross">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+									transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+								<rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+									fill="#323232"></rect>
+							</svg>
+						</div>
+						<div class="open-dispute__header">
+							<h1>Открыть спор с продавцом?</h1>
+							<h3>Опишите проблему</h3>
+						</div>
+						<textarea id="w3review" name="w3review" rows="4" cols="50"
+							placeholder="Что пошло не так?"></textarea>
+						<div class="open-dispute__buttons">
+							<input class="button_a-square" type="submit" value="Открыть спор">
+							<div class="separator__d-line"></div>
+							<a class="button_a-square button_deny-dispute">Не открывать</a>
+						</div>
+					</form>
+				</div>
 			</div>
-
-			<div class="header__additional-menu2">
-				<ul class="d-flex ">
-					<li class="pb pb20"><a href="profile.html">Мой профиль</a></li>
-					<li class="pb pb20"><a href="mymassages.html">Сообщения</a> <span class="count__messages">1</span></li>
-                    <li class="pb pb20"><a href="finance.html">Финансы</a></li>
-                    <li class="pb pb20"><a href="setting.html">Настройки</a></li>
-                    <li class="pb pb20 add__menu_prelast"><a href="history.html">История</a></li>
-                    <li class="pb pb20 add__menu_last"><a href="#">Выйти</a></li>
-
-				</ul>
+		
+			<div class="header__additional-menu-all">
+				<div class="header__additional-menu invisible">
+					<ul class="d-flex ">
+						<li class="text-align-center pb pb20"><a href="request.html">Тех.поддержка</a></li>
+						<li class="text-align-center pb pb10"><a href="#">Оставить отзыв</a></li>
+					</ul>
+		
+					<div class="header__additional-menu__social">
+						<ul>
+							<li class="social social__inst">
+								<a href="#"><img src="img/svg/inst.svg" alt=""></a>
+							</li>
+							<li class="social">
+								<a href="#"><img src="img/svg/vk2.svg" alt=""></a>
+							</li>
+							<li class="social">
+								<a href="#"><img src="img/svg/fb.svg" alt=""></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__menu-bell invisible">
+					<div class="header__additional-menu-bell-cursor"></div>
+					<div class="header__additional-menu-bell">
+						<div class="head__additional-menu-bell">
+							<p>Уведомления</p>
+						</div>
+						<div class="border-bell"></div>
+						<ul class="d-flex">
+							<li class="text-align-center pb pb20">
+								<div class="circle">4</div><a href=""> У вас новое сообщение</a>
+							</li>
+							<!-- <li class="text-align-center pb pb20"><p> У вас нет сообщений</p></li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="header__menu-profile invisible">
+					<div class="header__additional-menu2-cursor"></div>
+					<div class="header__additional-menu2">
+						<ul class="d-flex ">
+							<li class="pb pb20 balance-menu onlymobile">Баланс
+								<div class="balance-menu-body"><a>1000 руб</a></div>
+							</li>
+							<li class="pb pb20"><a href="profile.html">Мой профиль</a></li>
+							<li class="pb pb20"><a href="mymassages.html">Сообщения</a> <span
+									class="count__messages">1</span></li>
+							<li class="pb pb20"><a href="">Покупки</a></li>
+							<li class="pb pb20"><a href="">Продажи</a></li>
+							<li class="pb pb20"><a href="finance.html">Финансы</a></li>
+							<li class="pb pb20"><a href="edit.html">Настройки</a></li>
+							<li class="pb pb20 add__menu_prelast"><a href="history.html">История</a></li>
+							<li class="pb pb20 add__menu_last"><a href="#">Выйти</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-
-		</div>
-	</header> <!-- Header End-->
-			<!-- Header End-->
+		
+		</header>
+		<!-- Header End-->
 
 
 
 		<div class="content">
 			<div class="orderopen vvg">
 				<div class="orderopen__container container finance_container">
-					
+
 					<!-- header-link-pc -->
 					<div class="finance_container_header">
-						
+
 						<div class="finance_container_header--title">Финансы</div>
 
 						<div class="find__sort">
-									<form class="form__sort" action="#">
-										<div class="sort">
-											<select name="sort">
-												<option value="default">По умолчанию</option>
-												<option value="old__top">Все операции</option>
-												<option value="new__top">Вывод</option>
-												<option value="old__top">Пополнение</option>
-									
-											</select>
-										</div>
-									</form>
+							<form class="form__sort" action="#">
+								<div class="sort">
+									<select name="sort">
+										<option value="default">По умолчанию</option>
+										<option value="old__top">Все операции</option>
+										<option value="new__top">Вывод</option>
+										<option value="old__top">Пополнение</option>
+
+									</select>
+								</div>
+							</form>
 						</div>
 
 						<div class="finance_container_header--border"></div>
 						<div class="finance_container_header--balance">Баланс: 550 руб.</div>
-						<a href="#"><div class="finance_container_header--add">Пополнить</div></a>
+						<a href="#">
+							<div class="finance_container_header--add">Пополнить</div>
+						</a>
 						<div class="finance_container_header--border2"></div>
-						<a href="#"><div class="finance_container_header--give">Вывести</div></a>
+						<a href="#">
+							<div class="finance_container_header--give">Вывести</div>
+						</a>
 					</div>
 
 					<!-- /header-link-pc -->
@@ -155,7 +435,8 @@
 
 						<div class="img_im">
 							<div>
-							<img class="img_im--minus" src="img/svg/open_order.svg" alt=""></div>
+								<img class="img_im--minus" src="img/svg/open_order.svg" alt="">
+							</div>
 							<div> <img class="img_im--plus" src="img/svg/open_order.svg" alt=""></div>
 						</div>
 					</div>
@@ -163,161 +444,161 @@
 
 
 					<!-- items-mobile -->
-						<div class="history_row-table--mobile finance--mobile">
-							<div class="history_row-table--mobile--top">
-								<div class="history_row-table--mobile--order">
-									<span>Описание операции</span>
-									
-								</div>
-								<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
-									Завершенно
-								</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
 							</div>
-							<div class="history_row-table--mobile--body">
-			
-								<div class="history_row-table--mobile--body--right">
-									<div class="history_row-table--mobile--body--right--data">
-										<span>Дата:</span>
-										23 февраля 20:45
-									</div>
-									<div class="history_row-table--mobile--body--right--balance">
-										<p class="unit__maxnew">Заказ <span>#6799111</span></p>
-									</div>
-									<div class="history_row-table--mobile--body--right--price">
-										<span>Сумма</span>
-										320 ₽ 
-									</div>
-								</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
+								Завершенно
 							</div>
-						
 						</div>
-						<div class="history_row-table--mobile finance--mobile">
-							<div class="history_row-table--mobile--top">
-								<div class="history_row-table--mobile--order">
-									<span>Описание операции</span>
-									
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
 								</div>
-								<div class="history_row-table--mobile--status history_row-table--mobile--status--end2">
-									Завершенно
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Заказ <span>#6799111</span></p>
 								</div>
-							</div>
-							<div class="history_row-table--mobile--body">
-			
-								<div class="history_row-table--mobile--body--right">
-									<div class="history_row-table--mobile--body--right--data">
-										<span>Дата:</span>
-										23 февраля 20:45
-									</div>
-									<div class="history_row-table--mobile--body--right--balance">
-										<p class="unit__maxnew">Пополнение баланса</p>
-									</div>
-									<div class="history_row-table--mobile--body--right--price">
-										<span>Сумма</span>
-										320 ₽ 
-									</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
 								</div>
 							</div>
-						
 						</div>
-						<div class="history_row-table--mobile finance--mobile">
-							<div class="history_row-table--mobile--top">
-								<div class="history_row-table--mobile--order">
-									<span>Описание операции</span>
-									
-								</div>
-								<div class="history_row-table--mobile--status history_row-table--mobile--status--end3">
-									Завершенно
-								</div>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
 							</div>
-							<div class="history_row-table--mobile--body">
-			
-								<div class="history_row-table--mobile--body--right">
-									<div class="history_row-table--mobile--body--right--data">
-										<span>Дата:</span>
-										23 февраля 20:45
-									</div>
-									<div class="history_row-table--mobile--body--right--balance">
-										<p class="unit__maxnew">Вывод средств</p>
-									</div>
-									<div class="history_row-table--mobile--body--right--price">
-										<span>Сумма</span>
-										320 ₽ 
-									</div>
-								</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end2">
+								Завершенно
 							</div>
-						
 						</div>
-						<div class="history_row-table--mobile finance--mobile">
-							<div class="history_row-table--mobile--top">
-								<div class="history_row-table--mobile--order">
-									<span>Описание операции</span>
-									
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
 								</div>
-								<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
-									Завершенно
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Пополнение баланса</p>
 								</div>
-							</div>
-							<div class="history_row-table--mobile--body">
-			
-								<div class="history_row-table--mobile--body--right">
-									<div class="history_row-table--mobile--body--right--data">
-										<span>Дата:</span>
-										23 февраля 20:45
-									</div>
-									<div class="history_row-table--mobile--body--right--balance">
-										<p class="unit__maxnew">Заказ <span>#6799111</span></p>
-									</div>
-									<div class="history_row-table--mobile--body--right--price">
-										<span>Сумма</span>
-										320 ₽ 
-									</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
 								</div>
 							</div>
-						
 						</div>
-						<div class="show__more--reviews">
-								<a href="#">Показать еще</a>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end3">
+								Завершенно
+							</div>
 						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Вывод средств</p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
+								Завершенно
+							</div>
+						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Заказ <span>#6799111</span></p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="show__more--reviews">
+						<a href="#">Показать еще</a>
+					</div>
 					<!-- /items-mobile -->
 
 
 					<!-- items-pc -->
 					<div class="finance_container_body">
 						<div class="history__row-markers">
-								<div class="markers__date markers">
-									<p>Дата</p>
-								</div>
+							<div class="markers__date markers">
+								<p>Дата</p>
+							</div>
 
-								<div class="markers__description markers">
-									<p>Описание</p>
-								</div>
+							<div class="markers__description markers">
+								<p>Описание</p>
+							</div>
 
-								<div class="markers__status markers">
-									<p>Статус</p>
-								</div>
-								<div class="markers__sum markers">
-									<p>Сумма</p>
-								</div>
+							<div class="markers__status markers">
+								<p>Статус</p>
+							</div>
+							<div class="markers__sum markers">
+								<p>Сумма</p>
+							</div>
 						</div>
 
 						<div class="history_row-table">
 							<div class="unit__date unit">
 								<p class="unit__max">1 февраля 20:45</p>
 								<p class="unit__mini">4 месяца назад</p>
-							<!-- НОВАЯ ВСТАВКА -->
+								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__order unitnew">
-								<p class="unit__maxnew">заказ<br>#6799111</p>
+									<p class="unit__maxnew">заказ<br>#6799111</p>
 								</div>
-							<!-- / НОВАЯ ВСТАВКА -->
+								<!-- / НОВАЯ ВСТАВКА -->
 							</div>
 							<!-- /.unit__date -->
 
-		
+
 							<!-- /.unit__order -->
 							<div class="vl3 vl-second"></div>
 							<div class="unit__description unit unit__description_finance">
 								<p class="unit__max"> Заказ <span>№37835913 </span></p>
-					
+
 								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__status unitnew">
 									<p class="status">Оплачен <span class="moneynew">11.40 ₽</span></p>
@@ -332,12 +613,12 @@
 							<div class="unit__status unit">
 								<p class="status">Завершено</p>
 							</div>
-							<!-- /.unit__status -->	
+							<!-- /.unit__status -->
 							<div class="vl3 vl-fifth"></div>
 							<div class="unit__sum unit">
 								<p class="money">11.40 ₽ </p>
 							</div>
-							<!-- /.unit__sum -->						
+							<!-- /.unit__sum -->
 						</div>
 
 
@@ -345,20 +626,20 @@
 							<div class="unit__date unit">
 								<p class="unit__max">1 февраля 20:45</p>
 								<p class="unit__mini">4 месяца назад</p>
-							<!-- НОВАЯ ВСТАВКА -->
+								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__order unitnew">
-								<p class="unit__maxnew">заказ<br>#6799111</p>
+									<p class="unit__maxnew">заказ<br>#6799111</p>
 								</div>
-							<!-- / НОВАЯ ВСТАВКА -->
+								<!-- / НОВАЯ ВСТАВКА -->
 							</div>
 							<!-- /.unit__date -->
 
-		
+
 							<!-- /.unit__order -->
 							<div class="vl3 vl-second"></div>
 							<div class="unit__description unit unit__description_finance">
 								<p class="unit__max"> Пополнение баланса</p>
-					
+
 								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__status unitnew">
 									<p class="status">Пополнение баланса</p>
@@ -373,12 +654,12 @@
 							<div class="unit__status unit finance--green">
 								<p class="status">Завершено</p>
 							</div>
-							<!-- /.unit__status -->	
+							<!-- /.unit__status -->
 							<div class="vl3 vl-fifth"></div>
 							<div class="unit__sum unit">
 								<p class="money">11.40 ₽ </p>
 							</div>
-							<!-- /.unit__sum -->						
+							<!-- /.unit__sum -->
 						</div>
 
 
@@ -386,20 +667,20 @@
 							<div class="unit__date unit">
 								<p class="unit__max">1 февраля 20:45</p>
 								<p class="unit__mini">4 месяца назад</p>
-							<!-- НОВАЯ ВСТАВКА -->
+								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__order unitnew">
-								<p class="unit__maxnew">заказ<br>#6799111</p>
+									<p class="unit__maxnew">заказ<br>#6799111</p>
 								</div>
-							<!-- / НОВАЯ ВСТАВКА -->
+								<!-- / НОВАЯ ВСТАВКА -->
 							</div>
 							<!-- /.unit__date -->
 
-		
+
 							<!-- /.unit__order -->
 							<div class="vl3 vl-second"></div>
 							<div class="unit__description unit unit__description_finance">
 								<p class="unit__max"> Вывод средств</p>
-					
+
 								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__status unitnew">
 									<p class="status">Вывод средств</p>
@@ -414,32 +695,32 @@
 							<div class="unit__status unit finance--red">
 								<p class="status">Завершено</p>
 							</div>
-							<!-- /.unit__status -->	
+							<!-- /.unit__status -->
 							<div class="vl3 vl-fifth"></div>
 							<div class="unit__sum unit">
 								<p class="money">11.40 ₽ </p>
 							</div>
-							<!-- /.unit__sum -->						
+							<!-- /.unit__sum -->
 						</div>
 
 						<div class="history_row-table">
 							<div class="unit__date unit">
 								<p class="unit__max">1 февраля 20:45</p>
 								<p class="unit__mini">4 месяца назад</p>
-							<!-- НОВАЯ ВСТАВКА -->
+								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__order unitnew">
-								<p class="unit__maxnew">заказ<br>#6799111</p>
+									<p class="unit__maxnew">заказ<br>#6799111</p>
 								</div>
-							<!-- / НОВАЯ ВСТАВКА -->
+								<!-- / НОВАЯ ВСТАВКА -->
 							</div>
 							<!-- /.unit__date -->
 
-		
+
 							<!-- /.unit__order -->
 							<div class="vl3 vl-second"></div>
 							<div class="unit__description unit unit__description_finance">
 								<p class="unit__max"> Заказ <span>№37835913 </span></p>
-					
+
 								<!-- НОВАЯ ВСТАВКА -->
 								<div class="unitnew__status unitnew">
 									<p class="status">Оплачен <span class="moneynew">11.40 ₽</span></p>
@@ -454,19 +735,19 @@
 							<div class="unit__status unit">
 								<p class="status">Завершено</p>
 							</div>
-							<!-- /.unit__status -->	
+							<!-- /.unit__status -->
 							<div class="vl3 vl-fifth"></div>
 							<div class="unit__sum unit">
 								<p class="money">11.40 ₽ </p>
 							</div>
-							<!-- /.unit__sum -->						
+							<!-- /.unit__sum -->
 						</div>
 					</div>
 
-				<!-- /.orderopen__container container -->
+					<!-- /.orderopen__container container -->
 				</div>
 			</div>
-			<!-- /.orderopen -->		
+			<!-- /.orderopen -->
 		</div>
 		<!-- /.content -->
 		<!-- Footer Start-->
@@ -475,8 +756,11 @@
 				<div class="footer__container max-container d-flex align-items-center space-between">
 					<div class="footer__left-nav d-flex align-items-center">
 						<a href="index.html" class="logo">
-							<svg width="116" height="30" viewBox="0 0 116 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.578125 2.28125C0.252604 1.42188 0.558594 0.992188 1.49609 0.992188H4.60156C5.47396 0.992188 6.07292 1.44141 6.39844 2.33984L12.375 18.6484C12.6745 19.4818 12.8503 20.0417 12.9023 20.3281C12.9544 20.6016 13.013 21.0638 13.0781 21.7148H13.1562C13.2214 21.0638 13.2799 20.6016 13.332 20.3281C13.3841 20.0417 13.5599 19.4818 13.8594 18.6484L19.8359 2.33984C20.1615 1.44141 20.7604 0.992188 21.6328 0.992188H24.7383C25.6758 0.992188 25.9818 1.42188 25.6562 2.28125L16.3203 27.418C15.9297 28.4727 15.3177 29 14.4844 29H11.75C10.9167 29 10.3047 28.4727 9.91406 27.418L0.578125 2.28125ZM27.5703 23.5312C27.5703 20.9271 28.8138 19.0391 31.3008 17.8672C33.7878 16.6953 36.6263 16.0703 39.8164 15.9922V15.2109C39.8164 14.013 39.5169 13.1667 38.918 12.6719C38.319 12.1771 37.4857 11.9297 36.418 11.9297C35.6628 11.9297 34.9922 12.0404 34.4062 12.2617C33.8333 12.4701 33.332 12.7174 32.9023 13.0039C32.4857 13.2773 32.1081 13.5573 31.7695 13.8438C31.1706 14.3646 30.6758 14.3906 30.2852 13.9219L28.6641 11.9297C28.2604 11.4349 28.3581 10.9271 28.957 10.4062C29.4128 10.0026 29.9401 9.65104 30.5391 9.35156C31.151 9.05208 31.9583 8.77214 32.9609 8.51172C33.9635 8.23828 35.2656 8.10156 36.8672 8.10156C39.5755 8.10156 41.6523 8.72656 43.0977 9.97656C44.556 11.2266 45.2852 13.069 45.2852 15.5039V27.8281C45.2852 28.6094 44.8945 29 44.1133 29H40.9102C40.207 29 39.8555 28.6094 39.8555 27.8281V27.2422H39.8164C39.0482 27.9844 38.1237 28.5312 37.043 28.8828C35.9753 29.2214 34.9922 29.3906 34.0938 29.3906C31.9583 29.3906 30.3372 28.8698 29.2305 27.8281C28.1237 26.7734 27.5703 25.3411 27.5703 23.5312ZM33.3516 23.4141C33.3516 23.8698 33.4427 24.2669 33.625 24.6055C33.8073 24.931 34.0938 25.1719 34.4844 25.3281C34.875 25.4844 35.3112 25.5625 35.793 25.5625C36.457 25.5625 37.1016 25.4714 37.7266 25.2891C38.3516 25.1068 39.0482 24.6771 39.8164 24V19.7617C37.6289 20.0091 36.1641 20.3281 35.4219 20.7188C34.6797 21.1094 34.1458 21.513 33.8203 21.9297C33.5078 22.3464 33.3516 22.8411 33.3516 23.4141ZM51.7891 29C51.0078 29 50.6172 28.6094 50.6172 27.8281V1.34375C50.6172 0.5625 51.0078 0.171875 51.7891 0.171875H54.9141C55.6953 0.171875 56.0859 0.5625 56.0859 1.34375V9.23438C56.0859 9.75521 56.0599 10.276 56.0078 10.7969H56.0859C56.763 9.67708 57.5182 8.94792 58.3516 8.60938C59.1849 8.27083 60.1875 8.10156 61.3594 8.10156C64.4193 8.10156 66.5677 9.16276 67.8047 11.2852C69.0547 13.3945 69.6797 15.8815 69.6797 18.7461C69.6797 21.6107 69.0547 24.1042 67.8047 26.2266C66.5677 28.3359 64.4193 29.3906 61.3594 29.3906C60.1875 29.3906 59.1849 29.2214 58.3516 28.8828C57.5182 28.5443 56.763 27.8151 56.0859 26.6953H56.0078L55.9297 27.8281C55.8776 28.6094 55.526 29 54.875 29H51.7891ZM56.0859 19.625C56.0859 21.3828 56.431 22.8151 57.1211 23.9219C57.8242 25.0156 58.6641 25.5625 59.6406 25.5625C61.3984 25.5625 62.5443 24.9505 63.0781 23.7266C63.625 22.4896 63.8984 20.8294 63.8984 18.7461C63.8984 16.6628 63.625 15.0091 63.0781 13.7852C62.5443 12.5482 61.3984 11.9297 59.6406 11.9297C58.6641 11.9297 57.8242 12.4831 57.1211 13.5898C56.431 14.6836 56.0859 16.1094 56.0859 17.8672V19.625ZM72.8047 23.5312C72.8047 20.9271 74.0482 19.0391 76.5352 17.8672C79.0221 16.6953 81.8607 16.0703 85.0508 15.9922V15.2109C85.0508 14.013 84.7513 13.1667 84.1523 12.6719C83.5534 12.1771 82.7201 11.9297 81.6523 11.9297C80.8971 11.9297 80.2266 12.0404 79.6406 12.2617C79.0677 12.4701 78.5664 12.7174 78.1367 13.0039C77.7201 13.2773 77.3424 13.5573 77.0039 13.8438C76.4049 14.3646 75.9102 14.3906 75.5195 13.9219L73.8984 11.9297C73.4948 11.4349 73.5924 10.9271 74.1914 10.4062C74.6471 10.0026 75.1745 9.65104 75.7734 9.35156C76.3854 9.05208 77.1927 8.77214 78.1953 8.51172C79.1979 8.23828 80.5 8.10156 82.1016 8.10156C84.8099 8.10156 86.8867 8.72656 88.332 9.97656C89.7904 11.2266 90.5195 13.069 90.5195 15.5039V27.8281C90.5195 28.6094 90.1289 29 89.3477 29H86.1445C85.4414 29 85.0898 28.6094 85.0898 27.8281V27.2422H85.0508C84.2826 27.9844 83.3581 28.5312 82.2773 28.8828C81.2096 29.2214 80.2266 29.3906 79.3281 29.3906C77.1927 29.3906 75.5716 28.8698 74.4648 27.8281C73.3581 26.7734 72.8047 25.3411 72.8047 23.5312ZM78.5859 23.4141C78.5859 23.8698 78.6771 24.2669 78.8594 24.6055C79.0417 24.931 79.3281 25.1719 79.7188 25.3281C80.1094 25.4844 80.5456 25.5625 81.0273 25.5625C81.6914 25.5625 82.3359 25.4714 82.9609 25.2891C83.5859 25.1068 84.2826 24.6771 85.0508 24V19.7617C82.8633 20.0091 81.3984 20.3281 80.6562 20.7188C79.9141 21.1094 79.3802 21.513 79.0547 21.9297C78.7422 22.3464 78.5859 22.8411 78.5859 23.4141ZM94.7578 18.7461C94.7578 15.4258 95.6107 12.8216 97.3164 10.9336C99.0352 9.04557 101.587 8.10156 104.973 8.10156C108.358 8.10156 110.904 9.04557 112.609 10.9336C114.328 12.8216 115.188 15.4258 115.188 18.7461C115.188 22.0664 114.328 24.6706 112.609 26.5586C110.904 28.4466 108.358 29.3906 104.973 29.3906C101.587 29.3906 99.0352 28.4466 97.3164 26.5586C95.6107 24.6706 94.7578 22.0664 94.7578 18.7461ZM100.539 18.7461C100.539 21.2201 100.917 22.9779 101.672 24.0195C102.44 25.0482 103.54 25.5625 104.973 25.5625C106.405 25.5625 107.499 25.0482 108.254 24.0195C109.022 22.9779 109.406 21.2201 109.406 18.7461C109.406 16.2721 109.022 14.5208 108.254 13.4922C107.499 12.4505 106.405 11.9297 104.973 11.9297C103.54 11.9297 102.44 12.4505 101.672 13.4922C100.917 14.5208 100.539 16.2721 100.539 18.7461Z" fill="#3878F4"/>
+							<svg width="116" height="30" viewBox="0 0 116 30" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.578125 2.28125C0.252604 1.42188 0.558594 0.992188 1.49609 0.992188H4.60156C5.47396 0.992188 6.07292 1.44141 6.39844 2.33984L12.375 18.6484C12.6745 19.4818 12.8503 20.0417 12.9023 20.3281C12.9544 20.6016 13.013 21.0638 13.0781 21.7148H13.1562C13.2214 21.0638 13.2799 20.6016 13.332 20.3281C13.3841 20.0417 13.5599 19.4818 13.8594 18.6484L19.8359 2.33984C20.1615 1.44141 20.7604 0.992188 21.6328 0.992188H24.7383C25.6758 0.992188 25.9818 1.42188 25.6562 2.28125L16.3203 27.418C15.9297 28.4727 15.3177 29 14.4844 29H11.75C10.9167 29 10.3047 28.4727 9.91406 27.418L0.578125 2.28125ZM27.5703 23.5312C27.5703 20.9271 28.8138 19.0391 31.3008 17.8672C33.7878 16.6953 36.6263 16.0703 39.8164 15.9922V15.2109C39.8164 14.013 39.5169 13.1667 38.918 12.6719C38.319 12.1771 37.4857 11.9297 36.418 11.9297C35.6628 11.9297 34.9922 12.0404 34.4062 12.2617C33.8333 12.4701 33.332 12.7174 32.9023 13.0039C32.4857 13.2773 32.1081 13.5573 31.7695 13.8438C31.1706 14.3646 30.6758 14.3906 30.2852 13.9219L28.6641 11.9297C28.2604 11.4349 28.3581 10.9271 28.957 10.4062C29.4128 10.0026 29.9401 9.65104 30.5391 9.35156C31.151 9.05208 31.9583 8.77214 32.9609 8.51172C33.9635 8.23828 35.2656 8.10156 36.8672 8.10156C39.5755 8.10156 41.6523 8.72656 43.0977 9.97656C44.556 11.2266 45.2852 13.069 45.2852 15.5039V27.8281C45.2852 28.6094 44.8945 29 44.1133 29H40.9102C40.207 29 39.8555 28.6094 39.8555 27.8281V27.2422H39.8164C39.0482 27.9844 38.1237 28.5312 37.043 28.8828C35.9753 29.2214 34.9922 29.3906 34.0938 29.3906C31.9583 29.3906 30.3372 28.8698 29.2305 27.8281C28.1237 26.7734 27.5703 25.3411 27.5703 23.5312ZM33.3516 23.4141C33.3516 23.8698 33.4427 24.2669 33.625 24.6055C33.8073 24.931 34.0938 25.1719 34.4844 25.3281C34.875 25.4844 35.3112 25.5625 35.793 25.5625C36.457 25.5625 37.1016 25.4714 37.7266 25.2891C38.3516 25.1068 39.0482 24.6771 39.8164 24V19.7617C37.6289 20.0091 36.1641 20.3281 35.4219 20.7188C34.6797 21.1094 34.1458 21.513 33.8203 21.9297C33.5078 22.3464 33.3516 22.8411 33.3516 23.4141ZM51.7891 29C51.0078 29 50.6172 28.6094 50.6172 27.8281V1.34375C50.6172 0.5625 51.0078 0.171875 51.7891 0.171875H54.9141C55.6953 0.171875 56.0859 0.5625 56.0859 1.34375V9.23438C56.0859 9.75521 56.0599 10.276 56.0078 10.7969H56.0859C56.763 9.67708 57.5182 8.94792 58.3516 8.60938C59.1849 8.27083 60.1875 8.10156 61.3594 8.10156C64.4193 8.10156 66.5677 9.16276 67.8047 11.2852C69.0547 13.3945 69.6797 15.8815 69.6797 18.7461C69.6797 21.6107 69.0547 24.1042 67.8047 26.2266C66.5677 28.3359 64.4193 29.3906 61.3594 29.3906C60.1875 29.3906 59.1849 29.2214 58.3516 28.8828C57.5182 28.5443 56.763 27.8151 56.0859 26.6953H56.0078L55.9297 27.8281C55.8776 28.6094 55.526 29 54.875 29H51.7891ZM56.0859 19.625C56.0859 21.3828 56.431 22.8151 57.1211 23.9219C57.8242 25.0156 58.6641 25.5625 59.6406 25.5625C61.3984 25.5625 62.5443 24.9505 63.0781 23.7266C63.625 22.4896 63.8984 20.8294 63.8984 18.7461C63.8984 16.6628 63.625 15.0091 63.0781 13.7852C62.5443 12.5482 61.3984 11.9297 59.6406 11.9297C58.6641 11.9297 57.8242 12.4831 57.1211 13.5898C56.431 14.6836 56.0859 16.1094 56.0859 17.8672V19.625ZM72.8047 23.5312C72.8047 20.9271 74.0482 19.0391 76.5352 17.8672C79.0221 16.6953 81.8607 16.0703 85.0508 15.9922V15.2109C85.0508 14.013 84.7513 13.1667 84.1523 12.6719C83.5534 12.1771 82.7201 11.9297 81.6523 11.9297C80.8971 11.9297 80.2266 12.0404 79.6406 12.2617C79.0677 12.4701 78.5664 12.7174 78.1367 13.0039C77.7201 13.2773 77.3424 13.5573 77.0039 13.8438C76.4049 14.3646 75.9102 14.3906 75.5195 13.9219L73.8984 11.9297C73.4948 11.4349 73.5924 10.9271 74.1914 10.4062C74.6471 10.0026 75.1745 9.65104 75.7734 9.35156C76.3854 9.05208 77.1927 8.77214 78.1953 8.51172C79.1979 8.23828 80.5 8.10156 82.1016 8.10156C84.8099 8.10156 86.8867 8.72656 88.332 9.97656C89.7904 11.2266 90.5195 13.069 90.5195 15.5039V27.8281C90.5195 28.6094 90.1289 29 89.3477 29H86.1445C85.4414 29 85.0898 28.6094 85.0898 27.8281V27.2422H85.0508C84.2826 27.9844 83.3581 28.5312 82.2773 28.8828C81.2096 29.2214 80.2266 29.3906 79.3281 29.3906C77.1927 29.3906 75.5716 28.8698 74.4648 27.8281C73.3581 26.7734 72.8047 25.3411 72.8047 23.5312ZM78.5859 23.4141C78.5859 23.8698 78.6771 24.2669 78.8594 24.6055C79.0417 24.931 79.3281 25.1719 79.7188 25.3281C80.1094 25.4844 80.5456 25.5625 81.0273 25.5625C81.6914 25.5625 82.3359 25.4714 82.9609 25.2891C83.5859 25.1068 84.2826 24.6771 85.0508 24V19.7617C82.8633 20.0091 81.3984 20.3281 80.6562 20.7188C79.9141 21.1094 79.3802 21.513 79.0547 21.9297C78.7422 22.3464 78.5859 22.8411 78.5859 23.4141ZM94.7578 18.7461C94.7578 15.4258 95.6107 12.8216 97.3164 10.9336C99.0352 9.04557 101.587 8.10156 104.973 8.10156C108.358 8.10156 110.904 9.04557 112.609 10.9336C114.328 12.8216 115.188 15.4258 115.188 18.7461C115.188 22.0664 114.328 24.6706 112.609 26.5586C110.904 28.4466 108.358 29.3906 104.973 29.3906C101.587 29.3906 99.0352 28.4466 97.3164 26.5586C95.6107 24.6706 94.7578 22.0664 94.7578 18.7461ZM100.539 18.7461C100.539 21.2201 100.917 22.9779 101.672 24.0195C102.44 25.0482 103.54 25.5625 104.973 25.5625C106.405 25.5625 107.499 25.0482 108.254 24.0195C109.022 22.9779 109.406 21.2201 109.406 18.7461C109.406 16.2721 109.022 14.5208 108.254 13.4922C107.499 12.4505 106.405 11.9297 104.973 11.9297C103.54 11.9297 102.44 12.4505 101.672 13.4922C100.917 14.5208 100.539 16.2721 100.539 18.7461Z"
+									fill="#3878F4" />
 							</svg>
 						</a>
 						<div class="footer__menu">
@@ -530,9 +814,11 @@
 	<script src="js/scripts.js"></script>
 	<script src="js/nice-select.min.js"></script>
 
+
+
 	<script>
-				$('.sort select').ready(function() {
- 			 $('.sort select').niceSelect();
+		$('.sort select').ready(function () {
+			$('.sort select').niceSelect();
 
 		})
 
@@ -540,4 +826,5 @@
 
 
 </body>
+
 </html>

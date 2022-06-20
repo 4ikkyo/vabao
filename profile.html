@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/update.css">
     <link rel="stylesheet" href="css/splide.min.css">
+
+    <style>
+		body {
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+	</style>
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
 </head>
 
 <body>
@@ -40,11 +63,11 @@
                     </a>
                 </div>
                 <div class="header__right-nav d-flex align-items-center">
-
+        
                     <div class="header__balance">
                         <a>1000 руб</a>
                     </div>
-
+        
                     <div class="header__bell menu-bell-add">
                         <div class="circle-bell">1</div>
                         <!-- Круг с числом уведомлений -->
@@ -57,7 +80,7 @@
                                 </path>
                             </svg>
                         </button>
-
+        
                     </div>
                     <div class="header__search">
                         <button>
@@ -70,7 +93,7 @@
                         </button>
                     </div>
                     <div class="header__support">
-                        <a hre f="request.html">
+                        <a href="request.html">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="black"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -94,9 +117,9 @@
                         </button>
                     </div>
                 </div>
-
+        
                 <!-- <div class="header__separator"></div> -->
-
+        
                 <div
                     class="header__container header__container_search max-container d-flex align-items-center space-between">
                     <div class="header__search-line search-line d-flex align-items-center">
@@ -115,7 +138,7 @@
                         </form>
                     </div>
                 </div>
-
+        
                 <div class="header__smart-menu smart-menu">
                     <div class="header__smart-menu_lining"></div>
                     <div class="smart-menu__wrapper">
@@ -134,7 +157,7 @@
                         </ul>
                     </div>
                 </div>
-
+        
                 <div class="header__search-form search-form invisible">
                     <div class="search-form__lining invisible"></div>
                     <div class="search-form__wrapper">
@@ -177,7 +200,7 @@
                         </form>
                     </div>
                 </div>
-
+        
                 <div class="header__logIn-form logIn-form invisible">
                     <div class="logIn-form__lining invisible"></div>
                     <div class="logIn-form__wrapper">
@@ -210,7 +233,7 @@
                                 <button class="logIn-form__instagram"></button>
                                 <button class="logIn-form__pinterest"></button>
                             </div>
-
+        
                         </form>
                         <div class="logIn-form__separator"></div>
                         <div class="logIn-form__register d-flex align-items-center space-between">
@@ -218,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-
+        
                 <div class="header__register-form register-form">
                     <div class="register-form__lining"></div>
                     <div class="register-form__wrapper">
@@ -257,7 +280,7 @@
                         </form>
                     </div>
                 </div>
-
+        
                 <div class="header__pass-remember-form pass-remember-form">
                     <div class="pass-remember-form__lining"></div>
                     <div class="pass-remember-form__wrapper">
@@ -280,14 +303,41 @@
                     </div>
                 </div>
             </div>
-
+            <div class="header__open-dispute open-dispute invisible">
+                <div class="open-dispute__lining invisible"></div>
+                <div class="open-dispute__wrapper">
+                    <form action="/">
+                        <div class="open-dispute__cross">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+                                    transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+                                <rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+                                    fill="#323232"></rect>
+                            </svg>
+                        </div>
+                        <div class="open-dispute__header">
+                            <h1>Открыть спор с продавцом?</h1>
+                            <h3>Опишите проблему</h3>
+                        </div>
+                        <textarea id="w3review" name="w3review" rows="4" cols="50"
+                            placeholder="Что пошло не так?"></textarea>
+                        <div class="open-dispute__buttons">
+                            <input class="button_a-square" type="submit" value="Открыть спор">
+                            <div class="separator__d-line"></div>
+                            <a class="button_a-square button_deny-dispute">Не открывать</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
             <div class="header__additional-menu-all">
                 <div class="header__additional-menu invisible">
                     <ul class="d-flex ">
                         <li class="text-align-center pb pb20"><a href="request.html">Тех.поддержка</a></li>
                         <li class="text-align-center pb pb10"><a href="#">Оставить отзыв</a></li>
                     </ul>
-
+        
                     <div class="header__additional-menu__social">
                         <ul>
                             <li class="social social__inst">
@@ -327,6 +377,8 @@
                             <li class="pb pb20"><a href="profile.html">Мой профиль</a></li>
                             <li class="pb pb20"><a href="mymassages.html">Сообщения</a> <span
                                     class="count__messages">1</span></li>
+                            <li class="pb pb20"><a href="">Покупки</a></li>
+                            <li class="pb pb20"><a href="">Продажи</a></li>
                             <li class="pb pb20"><a href="finance.html">Финансы</a></li>
                             <li class="pb pb20"><a href="edit.html">Настройки</a></li>
                             <li class="pb pb20 add__menu_prelast"><a href="history.html">История</a></li>
@@ -335,7 +387,7 @@
                     </div>
                 </div>
             </div>
-
+        
         </header>
         <!-- Header End-->
         <div id="my-content" class="content">
