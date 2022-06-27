@@ -116,6 +116,12 @@ $(window).load(function(){
 	search();
 
 	var logIn = function() {
+		$('.header__account').on('click', function() {
+			$('.header__logIn-form').removeClass('invisible');
+			$('.header__logIn-form').addClass('visible');
+			$('.logIn-form__lining').removeClass('invisible');
+			$('.logIn-form__lining').addClass('visible');
+		});
 		$('.header__account-login').on('click', function() {
 			$('.header__logIn-form').removeClass('invisible');
 			$('.header__logIn-form').addClass('visible');

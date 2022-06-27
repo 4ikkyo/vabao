@@ -4,40 +4,6 @@
     padding: 0 4px 0 4px;
 }
 
-.slider {
-    -webkit-appearance: none;
-    appearance        : none;
-    width             : 100%;
-    padding           : 4px;
-    border            : 2px 0 2px 0 solid #f00;
-    border-radius     : 18px;
-    outline           : none;
-    opacity           : 0.7;
-    -webkit-transition: 0.2s;
-    transition        : opacity 0.2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance        : none;
-    width             : 25px;
-    height            : 25px;
-    background        : #f00;
-    border-radius     : 50%;
-    cursor            : pointer;
-}
-
-.slider::-moz-range-thumb {
-    width     : 25px;
-    height    : 25px;
-    background: #f00;
-    cursor    : pointer;
-}
-
 .slidervalue {
     position                  : absolute;
     top                       : 40px;
@@ -1086,6 +1052,7 @@ li {
     font-size    : 0;
     margin-bottom: 33px;
     margin-top   : 27px;
+	display: flex;
 }
 
 .tabs>input[type="radio"] {
