@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vabao</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/svg/favicon.svg">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<div class="bg-layer"></div>
+
+	<!-- Header Start-->
+	@@include('_header.html')
+	<!-- Header End-->
+
+	<!-- My massages Start -->
+	<section class="my-massages fullscreen">
+		<div class="my-massages__container container">
+			<div class="my-massages__part-left">
+				<h1 class="my-massages__title only-mobile">Сообщения</h1>
+				<div class="search-line">
+					<form action="/" class="about_search-line search-line__search">
+						<input type="text" placeholder="Поиск">
+						<button>
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M6.33333 11.6667C9.27885 11.6667 11.6667 9.27885 11.6667 6.33333C11.6667 3.38781 9.27885 1 6.33333 1C3.38781 1 1 3.38781 1 6.33333C1 9.27885 3.38781 11.6667 6.33333 11.6667Z"
+									stroke="#83859C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								</path>
+								<path d="M12.9996 13L10.0996 10.1" stroke="#83859C" stroke-width="1.5"
+									stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<div class="my-massages__contacts contacts">
+					<div class="contacts__item d-flex align-items-center">
+						<div class="contacts__img">
+							<img src="img/comments/3.webp" alt="">
+							<img class="online_svg" src="img/svg/online.svg" alt="online">
+						</div>
+						<div class="contacts__inf">
+							<h5>Вася</h5>
+							<p>Cколько будет стоить?</p>
+						</div>
+					</div>
+					<div class="contacts__item d-flex align-items-center">
+						<div class="contacts__img">
+							<img src="img/comments/5.webp" alt="">
+							<img class="online_svg" src="img/svg/offline.svg" alt="online">
+						</div>
+						<div class="contacts__inf">
+							<h5>Петя</h5>
+							<p>Есть ли какие-то дополнения?</p>
+						</div>
+					</div>
+					<div class="contacts__item d-flex align-items-center">
+						<div class="contacts__img">
+							<img src="img/comments/6.webp" alt="">
+							<img class="online_svg" src="img/svg/online.svg" alt="online">
+						</div>
+						<div class="contacts__inf">
+							<h5>Михаил</h5>
+							<p>Почему так дёшиво?</p>
+						</div>
+					</div>
+					<div class="contacts__item d-flex align-items-center">
+						<div class="contacts__img">
+							<img src="img/comments/1.webp" alt="">
+							<img class="online_svg" src="img/svg/offline.svg" alt="online">
+						</div>
+						<div class="contacts__inf">
+							<h5>Женя</h5>
+							<p>Что еще входит в указаную цену, а так</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="my-massages__chat chat">
+
+				<div class="chat__user">
+
+					<div class="chat__user-left-column">
+						<img class="arrow-back only-mobile" src="img/svg/chat-arrow-back.svg">
+						<a class="chat__img-user" href="profile.html">
+							<img src="img/comments/5.webp" alt="">
+						</a>
+						<div class="chat__user-data">
+							<a href="profile.html" class="chat__name-user">Петя</a>
+							<div class="rating">
+								<div class="review__stars-body">
+									<img src="img/svg/star-none.svg">
+									<img src="img/svg/star-none.svg">
+									<img src="img/svg/star-none.svg">
+									<img src="img/svg/star-none.svg">
+									<img src="img/svg/star-none.svg">
+
+									<div class="review__active" style="width: 100%;">
+										<img src="img/svg/star-full.svg">
+										<img src="img/svg/star-full.svg">
+										<img src="img/svg/star-full.svg">
+										<img src="img/svg/star-full.svg">
+										<img src="img/svg/star-full.svg">
+									</div>
+									<div class="review__stars">
+										<input type="radio" class="review__star" value="1" name="rating">
+										<input type="radio" class="review__star" value="2" name="rating">
+										<input type="radio" class="review__star" value="3" name="rating">
+										<input type="radio" class="review__star" value="4" name="rating">
+										<input type="radio" class="review__star" value="5" name="rating">
+									</div>
+								</div>
+								<div class="rating__value">3</div>
+							</div>
+							<p class="chat__data-visit">Был в сети сегодня в 16:26</p>
+						</div>
+					</div>
+
+					<div class="chat__user-right-column">
+						<!-- <a class="button-o-v2" href="#">Открыть спор</a> -->
+						<a class="row_a_not" href="request.html"></a>
+					</div>
+
+				</div>
+
+				<div class="chat-text">
+					<ul class="chat-text-left">
+						<li>
+							<p>Привет</p>
+							<span>16:17</span>
+						</li>
+						<li>
+							<p>Привет</p>
+							<span>16:17</span>
+						</li>
+					</ul>
+					<ul class="chat-text-right">
+						<li>
+							<p>Привет</p>
+							<span>16:17</span>
+						</li>
+						<li>
+							<p>Привет</p>
+							<span>16:17</span>
+						</li>
+					</ul>
+					<ul class="date-notice">
+						<li>
+							<span>Сегодня в 11:40</span>
+						</li>
+					</ul>
+					<ul class="chat-text-left">
+						<li>
+							<p>Ок... отправляю</p>
+							<span>16:17</span>
+						</li>
+						<li style="background:none; padding: 0;">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<span>16:17</span>
+						</li>
+						<li style="background:none; padding: 0;">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<span>16:17</span>
+						</li>
+						<li style="background:none; padding: 0;">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<span>16:17</span>
+						</li>
+						<li style="background:none; padding: 0;">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<img src="img/bg-jpg/image1.webp" alt="">
+							<span>16:17</span>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="send-chat">
+					<form action="#" class="form__write">
+						<ul class="send-img"></ul>
+
+						<div class="send-line">
+							<div class="alert__button1">
+								<label for="files"><img src="img/svg/clip.svg"></label>
+								<input class="invisible" type="file" id="files" name="files" multiple>
+							</div>
+
+							<input type="text" class="alert__text" name="massege" id="edit" placeholder="Написать...">
+
+							<button class="alert__button2">
+								<img src="img/svg/send2.svg">
+							</button>
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section> <!-- My massages Start -->
+	@@include('_footer.html');
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/mymassages.js"></script>
+	<script src="js/scripts.js"></script>
+</body>

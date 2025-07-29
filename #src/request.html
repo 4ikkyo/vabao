@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Контакты</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<div class="bg-layer"></div>
+	<div class="wrapper">
+
+
+		<!-- Header Start-->
+		@@include('_header.html');
+		<div class="request fullscreen">
+			<div class="request__container container">
+				<div class="request_title">
+					<h2>Отправить запрос</h2>
+				</div>
+				<form action="#">
+
+					<div class="request__email">
+						<input class="contacts__email" type="email" name="email" placeholder="Адресс эл. почты">
+					</div>
+
+					<div class="request__list">
+						<div class="tabs-mini">
+							<input type="radio" name="tab-btn" id="tab-btn-1" checked="">
+							<label class="default" for="tab-btn-1">Выберите тему</label>
+
+							<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+							<label for="tab-btn-2">Я оплатил заказ, но продавец не отвечает</label>
+
+							<input type="radio" name="tab-btn" id="tab-btn-3" value="">
+							<label for="tab-btn-3">Я недоволен заказом, хочу пожаловаться на продавца</label>
+
+							<input type="radio" name="tab-btn" id="tab-btn-4" value="">
+							<label class="right" for="tab-btn-4">Платёж с моей банковской карты заблокирован</label>
+
+							<input type="radio" name="tab-btn" id="tab-btn-5" value="">
+							<label class="right" for="tab-btn-5">Покупатель забыл подтвердить заказ</label>
+
+							<label class="close only-mobile">Закрыть</label>
+						</div>
+					</div>
+
+					<div class="request__num">
+						<input type="text" name="number" placeholder="Номер заказа">
+						<p>Не нужно заполнять если запрос не связан с заказом</p>
+					</div>
+
+					<div class="request__areatext">
+						<textarea style="resize: none;" name="text" rows="5" placeholder="Сообщение"></textarea>
+						<p>Подобно опишите что произошло, это поможет решить проблему быстрее</p>
+					</div>
+
+					<div class="add-image" js-file-manager>
+						<label js-fake-file-input><a js-no-file><span class="add-image-button">Добавить файл</span> <span>или перетащите файлы сюда</span></a><span js-chip-container></span></label>
+						<input type="file" id="userfoto" name="userfoto" accept=".jpg, .jpeg, .png" multiple js-real-file-input>
+						<div hidden js-remove-files></div>
+						<p>При необходимости прикрепите файлы</p>
+					</div>
+
+					<img src="img/svg/recaptcha.svg">
+
+					<button type="submit" class="button-v2">Отправить</button>
+				</form>
+			</div>
+			<!-- /.request_container -->
+		</div>
+		<!-- /.request -->
+		<!-- Footer Start-->
+		@@include('_footer.html');
+		<!-- Footer End-->
+		<!-- Footer End-->
+	</div>
+	<!-- /.wrapper -->
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/request.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+
+</html>

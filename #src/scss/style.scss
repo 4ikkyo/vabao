@@ -1,0 +1,96 @@
+$primary-color    : #3878F4;
+$dark             : #323232;
+$light-gray       : #FCFCFC;
+$white            : #fff;
+$light-blue       : #EFF4FE;
+$light-blue-second: #C3D7FC;
+$button-hover     : #1F66EF;
+
+::-webkit-scrollbar-button:end:increment,
+::-webkit-scrollbar-button:start:decrement {
+    background: transparent;
+    display   : none
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border-radius   : 9pt;
+    display         : block;
+    background-color: #dce0e4;
+    border          : 4px solid hsla(0, 0%, 100%, 0);
+    background-clip : content-box
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #ccc
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius     : 9pt;
+    display           : block;
+    background-color  : #dce0e4;
+    border            : 5px solid hsla(0, 0%, 100%, 0);
+    background-clip   : content-box;
+    -webkit-transition: background-color .5s ease;
+    transition        : background-color .5s ease
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: hsla(0, 0%, 100%, .7)
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width           : 14px
+}
+
+
+@import "fonts.scss";
+
+@import "_normolize.scss";
+
+@import "_elements.scss";
+
+@import "_header.scss";
+
+@import "_index.scss";
+
+@import "_ads.scss";
+
+@import "_profile.scss";
+
+@import "_auth-reg.scss";
+
+@import "_order-processing.scss";
+
+@import "_mymassages.scss";
+
+@import "_request.scss";
+
+@import "_history.scss";
+
+@import "_rules.scss";
+
+body {
+    font-family   : 'Nunito';
+    letter-spacing: 0.02em;
+    background    : #FCFCFC;
+}
+
+body {
+    opacity   : 0;
+    transition: 0.5s ease;
+}
+
+.body_visible {
+    opacity: 1 !important;
+}
+
+@import "_footer.scss";
+
+@import "slick.scss";
+
+@import "autoSearch.scss";
+
+@import "select2.min.scss";
+
+//@import "slick-theme.scss";

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Открытый заказ</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		body {
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+
+		.body_visible {
+			opacity: 1 !important;
+		}
+	</style>
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+
+</head>
+
+<body>
+	<div class="bg-layer"></div>
+	<div class="wrapper">
+
+		<!-- Header Start-->
+		@@include('_header.html')
+		<!-- Header End-->
+
+		<div class="order-processing fullscreen">
+			<div class="order-processing__container container">
+				<div class="order-processing__simple">
+					<div class="order-processing__column-left">
+
+						<div class="order-processing__title">
+							<h4>Подробности заказа #967</h4>
+						</div>
+
+						<div class="order-processing__slide">
+							<img src="img/svg/gameimg.svg" alt="gmae img">
+							<img src="img/svg/gameimg2.svg" alt="gmae img">
+							<img src="img/svg/gameimg.svg" alt="gmae img">
+							<img src="img/svg/gameimg.svg" alt="gmae img">
+							<img src="img/svg/gameimg2.svg" alt="gmae img">
+							<img src="img/svg/gameimg.svg" alt="gmae img">
+						</div>
+
+						<div class="order-processing__info-about">
+							<div class="order-processing__status">
+								<p class="order-processing__status-title">Статус</p>
+								<p class="order-processing__status-subtitle" style="color: blue;">Открыт</p>
+							</div>
+
+							<div class="order-processing__sum">
+								<p class="order-processing__sum-title">Сумма</p>
+								<p class="order-processing__sum-subtitle">11.40 ₽ </p>
+							</div>
+
+							<div class="order-processing__namegame">
+								<p class="order-processing__namegame-title">Название игры</p>
+								<p class="order-processing__namegame-subtitle">Brawl Stars</p>
+							</div>
+
+							<div class="order-processing__category">
+								<p class="order-processing__category-title">Категория</p>
+								<p class="order-processing__category-subtitle">Аккаунты</p>
+							</div>
+						</div>
+
+						<div class="order-processing__description">
+							<p class="order-processing__description-title">Описание</p>
+							<p class="order-processing__description-text">Lorem ipsum dolor sit amet, consectetur
+								adipisicing
+								elit. Dolor, mollitia, optio rerum dignissimos quia cumque laborum assumenda fugiat
+								eaque. Ipsum voluptatibus impedit, alias saepe vitae sequi nulla laudantium at ex.</p>
+							<p class="order-processing__description-text">Lorem ipsum dolor sit amet, consectetur
+								adipisicing
+								elit. Dolor, mollitia, optio rerum dignissimos quia cumque laborum assumenda fugiat
+								eaque.</p>
+						</div>
+
+						<a class="button-v2" href="orderclose.html">
+							Подтвердить выполнение заказа
+						</a>
+
+					</div>
+
+					<div class="order-processing__column-right">
+
+						<div class="chat">
+							<div class="chat__user">
+
+								<div class="chat__user-left-column">
+									<a class="chat__img-user" href="profile.html">
+										<img src="img/comments/5.webp" alt="">
+									</a>
+									<div class="chat__user-data">
+										<a href="profile.html" class="chat__name-user">Петя</a>
+										<div class="rating">
+											<div class="review__stars-body">
+												<img src="img/svg/star-none.svg">
+												<img src="img/svg/star-none.svg">
+												<img src="img/svg/star-none.svg">
+												<img src="img/svg/star-none.svg">
+												<img src="img/svg/star-none.svg">
+
+												<div class="review__active" style="width: 100%;">
+													<img src="img/svg/star-full.svg">
+													<img src="img/svg/star-full.svg">
+													<img src="img/svg/star-full.svg">
+													<img src="img/svg/star-full.svg">
+													<img src="img/svg/star-full.svg">
+												</div>
+												<div class="review__stars">
+													<input type="radio" class="review__star" value="1" name="rating">
+													<input type="radio" class="review__star" value="2" name="rating">
+													<input type="radio" class="review__star" value="3" name="rating">
+													<input type="radio" class="review__star" value="4" name="rating">
+													<input type="radio" class="review__star" value="5" name="rating">
+												</div>
+											</div>
+											<div class="rating__value">3</div>
+										</div>
+										<p class="chat__data-visit">Был в сети сегодня в 16:26</p>
+									</div>
+								</div>
+
+								<div class="chat__user-right-column">
+									<!-- <a class="button-o-v2" href="#">Открыть спор</a> -->
+									<a class="row_a_not" href="request.html"></a>
+								</div>
+
+							</div>
+
+							<div class="chat-text">
+								<img src="img/bg-jpg/orderopen.svg" alt=""
+									style="position: absolute; margin: 0 auto; left: 0; right: 0;">
+							</div>
+
+
+							<div class="send-chat">
+								<form action="#" class="form__write">
+									<ul class="send-img"></ul>
+
+									<div class="send-line">
+										<div class="alert__button1">
+											<label for="files"><img src="img/svg/clip.svg"></label>
+											<input class="invisible" type="file" id="files" name="files" multiple>
+										</div>
+
+										<input type="text" class="alert__text" name="massege" id="edit"
+											placeholder="Написать...">
+
+										<button class="alert__button2">
+											<img src="img/svg/send2.svg">
+										</button>
+									</div>
+
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="order-processing__review">
+					<div class="order-processing__review-header">
+						<div class="order-processing__review-item-left">
+							<div class="order-processing__review-title">
+								<h4>Последние отзывы</h4>
+							</div>
+							<div class="order-processing__review-rating only-mobile">
+								<div class="rating">
+									<div class="review__stars-body">
+										<img src="img/svg/star-none.svg">
+										<img src="img/svg/star-none.svg">
+										<img src="img/svg/star-none.svg">
+										<img src="img/svg/star-none.svg">
+										<img src="img/svg/star-none.svg">
+
+										<div class="review__active" style="width: 100%;">
+											<img src="img/svg/star-full.svg">
+											<img src="img/svg/star-full.svg">
+											<img src="img/svg/star-full.svg">
+											<img src="img/svg/star-full.svg">
+											<img src="img/svg/star-full.svg">
+										</div>
+										<div class="review__stars">
+											<input type="radio" class="review__star" value="1" name="rating">
+											<input type="radio" class="review__star" value="2" name="rating">
+											<input type="radio" class="review__star" value="3" name="rating">
+											<input type="radio" class="review__star" value="4" name="rating">
+											<input type="radio" class="review__star" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3</div>
+								</div>
+								<span>Всего: 35</span>
+							</div>
+						</div>
+						<div class="order-processing__review-item-right only-desktop">
+							<!-- <img class="slid__spec spec__prev" src="img/icons/Vector7.png" alt=""> -->
+							<!-- <img src="img/icons/Rectangle84.png" alt=""> -->
+							<div class="v-line"></div>
+							<!-- <img class="slid__spec spec__next" src="img/icons/Vector8.png" alt=""> -->
+						</div>
+					</div>
+
+					<div class="order-processing__review-slider" id="slider">
+						@@include('_user-review.html')
+						@@include('_user-review.html')
+						@@include('_user-review.html')
+						@@include('_user-review.html')
+						@@include('_user-review.html')
+						@@include('_user-review.html')
+					</div>
+				</div>
+
+				<div class="same-product only-desktop">
+					<div class="same-product__header">
+						<h4>Похожие товары</h4>
+					</div>
+
+					<div class="same-product__slider">
+						@@include('_offer-pro-mini.html')
+						@@include('_offer-pro-mini.html')
+						@@include('_offer-proplus-mini.html')
+						@@include('_offer-pro-mini.html')
+						@@include('_offer-pro-mini.html')
+						@@include('_offer-proplus-mini.html')
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.content -->
+	<!-- Footer Start-->
+	@@include('_footer.html')
+	<!-- Footer End-->
+	</div>
+	<!-- /.wrapper -->
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/mymassages.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script> //Разделение у слайдера по 3 блокам
+		var divs = $(".order-processing__review-slider > div");
+		var j = 0;
+		for (let i = 0; i < divs.length; i += 3) {
+			j = j + 1;
+			divs.slice(i, i + 3).wrapAll("<div class='slide-" + j + "'></div>");
+		}
+	</script>
+
+	<script> //Расчет высоты блока чата
+		window.onload = function () {
+			document.querySelector('.order-processing__column-right').style.height = document.querySelector('.order-processing__column-left').offsetHeight + 'px';
+		}
+	</script>
+
+</body>
+
+</html>

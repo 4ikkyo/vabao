@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VABAO</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/update.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer bg_index"></div>
+
+    <!-- Header Start-->
+    @@include('_header.html');
+    <!-- Header End-->
+
+    <main id="main" style="max-width: 1258px; margin: 0 auto; margin-bottom:250px">
+        <section class="support__subsection-header">
+            <div class="container support__subsection-header-container">
+                <div class="support__subsection-header-first">
+                    <a href="support-main.html"></a>
+                    <img src="img/svg/arrow2.svg" alt="" style="transform: rotate(180deg);">
+                    <h1>Назад</h1>
+                </div>
+                <div class="support__search">
+                    <input type="text" name="ads__search" placeholder="Введите запрос">
+                    <a class="button_a">Поиск</a>
+                </div>
+            </div>
+        </section>
+        <hr class="only-pc">
+        <section class="support__chapter">
+            <div class="container" style="display:inherit">
+                <div style="width: 100%">
+                    <h1
+                        style="text-align: center; font-weight: 600; font-size: clamp(26px, 4vw, 36px); line-height: 49px;">
+                        Принципы работы</h1>
+                    <div class="support__subtitles">
+                        <p
+                            style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 41px; margin-bottom:clamp(35px, 5vw, 60px);">
+                            В разделе «Баланс» отображаются все финансовые операции, которые когда-либо производились на
+                            вашем аккаунте, а также общее количество денежных средств.</p>
+                        <p
+                            style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 41px; margin-bottom:clamp(35px, 5vw, 60px);">
+                            Vabao не является банком, платежной системой или иной финансовой организацией и не ведет
+                            расчетные счета пользователей. Кабинет Vabao обеспечивает лишь удобство расчетов между
+                            Клиентами, Игроками и Агентом. </p>
+                        <p
+                            style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 41px; margin-bottom:clamp(35px, 5vw, 60px);">
+                            Ввиду этого, пожалуйста, не используйте баланс Vabao для накопления и сохранения денежных
+                            средств, поскольку он для этого не предназначен.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="button_a">Напиши нам</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Start-->
+    @@include('_footer.html');
+    <!-- Footer End-->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        $('.search-line__search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.search-line__search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+    </script>
+</body>
+
+</html>

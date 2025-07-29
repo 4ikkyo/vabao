@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>VABAO</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="img/svg/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<div class="bg-layer bg_index"></div>
+
+	<main id="main">
+		<section class="auth-reg fullscreen">
+			<div class="auth-reg__container">
+				<div class="auth-reg__form">
+					<form action="" method="post">
+						<div class="auth-reg__title">
+							<h1>Войти</h1>
+							<p>Введите данные для входа используемые при регистрации</p>
+						</div>
+						<div class="form-group">
+
+							<div class="login">
+								<label for="login">Логин</label>
+								<div class="input-login">
+									<input type="email" class="form-login" id="login" placeholder="name@example.ru" required>
+								</div>
+							</div>
+
+							<div class="password">
+								<label for="password">Пароль</label>
+								<div class="input-password">
+									<input type="password" class="form-password" id="password-auth"
+										placeholder="мин. 8 символов" minlength="8" required>
+									<div class="password-hide"></div>
+								</div>
+							</div>
+
+							<div class="check-remember checkbox-standard">
+								<input type="checkbox" class="form-check-remember" id="remember" required>
+								<label class="form-check-label" for="remember">Запомнить меня</label>
+							</div>
+
+						</div>
+						<input type="submit" class="button-v2 glow" value="Войти">
+						<a href="#" class="forgot-password glow">Забыли пароль?</a>
+					</form>
+					<div class="second-form">
+						<div class="sign-in-soc-network">
+							<h3>Войти через</h3>
+							<a>
+								<img src="img/svg/vk2.svg">
+							</a>
+							<a>
+								<img src="img/svg/google.svg">
+							</a>
+						</div>
+						<p class="link-registration">У вас нет аккаунта? <a href="reg.html">Зарегистрироваться</a></p>
+					</div>
+				</div>
+
+				<div class="auth-reg__img only-desktop">
+					<img src="img/svg/auth-img1.svg" alt="">
+					<img src="img/svg/auth-img2.svg" alt="">
+					<img src="img/svg/auth-img3.svg" alt="">
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

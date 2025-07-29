@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VABAO</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/update.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer bg_index"></div>
+
+    <!-- Header Start-->
+    @@include('_header.html');
+    <!-- Header End-->
+
+    <main id="main" style="max-width: 1258px; margin: 0 auto; margin-bottom:250px">
+        <section class="support__subsection-header">
+            <div class="container support__subsection-header-container">
+                <div class="support__subsection-header-first">
+                    <a href="support-main.html"></a>
+                    <img src="img/svg/arrow2.svg" alt="" style="transform: rotate(180deg);">
+                    <h1>Назад</h1>
+                </div>
+                <div class="support__search">
+                    <input type="text" name="ads__search" placeholder="Введите запрос">
+                    <a class="button_a">Поиск</a>
+                </div>
+            </div>
+        </section>
+        <hr class="only-pc">
+        <section class="support__chapter">
+            <div class="container" style="display:inherit">
+                <div style="width: 100%">
+                    <h1
+                        style="text-align: center; font-weight: 600; font-size: clamp(26px, 4vw, 36px); line-height: 49px;">
+                        Правильный выбор продавца</h1>
+                    <div class="support__subtitles">
+                        <p style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 33px;">Все сделки на
+                            Vabao защищены, однако, для дополнительной безопасности можно перестраховаться и обратить
+                            внимание на следующие характеристики продавца:<br>
+                            <br>
+                            <b style="font-weight: bold;">Дата регистрации.</b> Чем старше аккаунт продавца, тем
+                            лучше.<br>
+                            <b style="font-weight: bold;">Отзывы.</b> Чем больше, тем лучше. При этом прочитать сами
+                            отзывы тоже будет не лишним — иногда в них содержится довольно ценная информация.<br>
+                            <b style="font-weight: bold;">Даты отзывов.</b> Также очень важный параметр, поскольку даже
+                            в том случае, если дата регистрации самого аккаунта продавца старая (что само по себе
+                            хорошо), но абсолютно все отзывы получены недавно, это означает, что продавец не столь
+                            опытен и надежен.<br>
+                            Игры, в которых были заработаны отзывы. Если у продавца все отзывы из одной игры, а вы
+                            совершаете заказ в совершенно другой игре, то на это стоит обратить внимание, особенно в том
+                            случае, если вы совершаете какую-то сложную покупку (например, прохождение рейда в WOW).<br>
+                            <b style="font-weight: bold;">Сумма заказа.</b> В каждом отзыве указана денежная сумма
+                            заказа, к которому он относится. На это стоит обратить внимание в том случае, если вы
+                            совершаете крупный заказ, а у продавца есть отзывы только за мелкие заказы.<br>
+                            Всё это очень важно, поскольку добиться этого можно исключительно за долгие месяцы торговли
+                            и адекватного решения проблем покупателей, если таковые возникают.<br>
+                            <br>
+                            Мы ни в коем случае не утверждаем, что не стоит ничего покупать у новеньких продавцов,
+                            которые зачастую продают дешевле других. Однако, вам важно правильно соизмерять свои риски.
+                            Покупать у старых и проверенных продавцов безопаснее. <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="button_a">Напиши нам</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Start-->
+    @@include('_footer.html');
+    <!-- Footer End-->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        $('.search-line__search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.search-line__search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+    </script>
+</body>
+
+</html>

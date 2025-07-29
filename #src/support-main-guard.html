@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VABAO</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/update.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer bg_index"></div>
+
+    <!-- Header Start-->
+    @@include('_header.html');
+    <!-- Header End-->
+
+    <main id="main" style="max-width: 1258px; margin: 0 auto; margin-bottom:250px">
+        <section class="support__subsection-header">
+            <div class="container support__subsection-header-container">
+                <div class="support__subsection-header-first">
+                    <a href="support-main.html"></a>
+                    <img src="img/svg/arrow2.svg" alt="" style="transform: rotate(180deg);">
+                    <h1>Назад</h1>
+                </div>
+                <div class="support__search">
+                    <input type="text" name="ads__search" placeholder="Введите запрос">
+                    <a class="button_a">Поиск</a>
+                </div>
+            </div>
+        </section>
+        <hr class="only-pc">
+        <section class="support__chapter">
+            <div class="container" style="display:inherit">
+                <div style="width: 100%">
+                    <h1
+                        style="text-align: center; font-weight: 600; font-size: clamp(26px, 4vw, 36px); line-height: 49px;">
+                        Защита сделок</h1>
+                    <div class="support__subtitles">
+                        <p style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 33px;">Как вы могли
+                            понять по предыдущим статьям, Vabao имеет два базовых механизма защиты:<br>
+                            <br>
+                            <b style="font-weight: bold;">1. Защита сделки</b><br>
+                            <b style="font-weight: bold;">2. Система отзывов</b><br>
+                            <br>
+                            Соответственно, если вы хотите снизить риски относительно событий, которые произойдут после
+                            вашего заказа, будь то «откат» аккаунта, бан или другие проблемы, мы рекомендуем вам
+                            правильно выбирать продавца и обращать внимание на его отзывы.<br>
+                            <br>
+                            Однако, на этом всё не заканчивается. Если вы всё же попадаете в сложную ситуацию, то мы
+                            сделаем все возможное для того, чтобы вернуть ваши деньги. Даже если продавец уже вывел
+                            деньги с нашего сайта, наша система сделает всё возможное и невозможное для того, чтобы
+                            обнаружить его дополнительные аккаунты (если они есть или будут в будущем) и вернуть
+                            денежные средства на баланс вашего заказа для проведения разбирательства по существу.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="button_a">Напиши нам</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Start-->
+    @@include('_footer.html');
+    <!-- Footer End-->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        $('.search-line__search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.search-line__search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+    </script>
+</body>
+
+</html>

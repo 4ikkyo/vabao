@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Объявления</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer"></div>
+    <div class="wrapper">
+
+        <!-- Header Start-->
+        @@include('_header.html')
+        <!-- Header End-->
+
+        <div class="obji invisible">
+            <div class="search-form__lining invisible"></div>
+            <div class="pass_ch obj_wrapp search-form__wrapper">
+                <div class="register-form__cross">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+                            transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+                        <rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+                            fill="#323232">
+                        </rect>
+                    </svg>
+                </div>
+                <div class="obj_wrapp_item">
+                    <div class="uslug_title">Новое объявление</div>
+
+                    <div class="form">
+                        <form action="#">
+
+                            <div class="list theme__select">
+                                <select name="theme">
+                                    <option selected value="theme0">Тип объявления</option>
+                                    <option value="theme1">Аккаунты</option>
+                                    <option value="theme2">Предметы</option>
+                                    <option value="theme3">Услуги</option>
+                                    <option value="theme4">Прочее</option>
+                                </select>
+                            </div>
+
+
+                            <div class="chose-game">
+                                <select name="theme" class="chose-game-select">
+                                    <option selected="" value="theme0">Выбрать игру</option>
+                                </select>
+                            </div>
+
+                            <div class="wrapp_img">
+                                <div class="wrapp_img--item-add" style="cursor: pointer;">
+                                    <input class="input__file" id="input__file" name="file" type="file"
+                                        accept=".jpg, .jpeg, .png" multiple>
+                                    <label for="input__file" style="cursor: pointer;">
+                                        <img src="img/svg/add_img.svg" alt="add-img">
+                                    </label>
+                                </div>
+                                <ul class="regular slider" style="display: grid">
+                                    <li class="wrapp_img--item">
+                                        <img class="added-img" src="img/bg-jpg/image1.webp" width="141px">
+                                        <img class="chat__img--rem" src="img/svg/imgremove.svg" onclick="del(this)">
+                                    </li>
+                                    <li class="wrapp_img--item">
+                                        <img class="added-img" src="img/bg-jpg/image1.webp" width="141px">
+                                        <img class="chat__img--rem" src="img/svg/imgremove.svg" onclick="del(this)">
+                                    </li>
+                                    <li class="wrapp_img--item">
+                                        <img class="added-img" src="img/bg-jpg/image1.webp" width="141px">
+                                        <img class="chat__img--rem" src="img/svg/imgremove.svg" onclick="del(this)">
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="areatext">
+                                <textarea style="resize: none;" name="text" rows="5" placeholder="Введите описание"
+                                    maxlength="512"></textarea>
+                            </div>
+
+                            <div class="request_price">
+                                <input class="price-input" type="number" name="price" placeholder="Цена">
+                            </div>
+
+                            <div class="register-form__obji checkbox-standard">
+                                <input type="checkbox" class="register-form__checkbox" id="register-form__checkbox">
+                                <label for="register-form__checkbox" class="register-form__label">Я прочитал и согласен
+                                    с Правилами Сообщества</label>
+                            </div>
+
+                            <div class="block__button">
+                                <input type="submit" class="button-v2" value="Разместить объявление">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ads fullscreen">
+            <div class="ads__container container">
+                <div class="ads__columns">
+                    <div class="left__wrapper">
+                        <div class="range-wrap">
+                            <div class="range-slider">
+                                <div class="slidervalue invisible" id="sliderval">
+                                    <div class="value" id="value"></div>
+                                </div>
+                                <input id="range1" class="input-range sort-range" type="range" list="tickmarks" max="38"
+                                    value="0">
+
+
+                                <datalist class="data" id="tickmarks">
+                                    <option value="0">New</option>
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                    <option value="3">C</option>
+                                    <option value="4">D</option>
+                                    <option value="5">E</option>
+                                    <option value="6">F</option>
+                                    <option value="7">G</option>
+                                    <option value="8">H</option>
+                                    <option value="9">I</option>
+                                    <option value="10">G</option>
+                                    <option value="11">K</option>
+                                    <option value="12">L</option>
+                                    <option value="13">M</option>
+                                    <option value="14">N</option>
+                                    <option value="15">O</option>
+                                    <option value="16">P</option>
+                                    <option value="17">Q</option>
+                                    <option value="18">R</option>
+                                    <option value="19">S</option>
+                                    <option value="20">T</option>
+                                    <option value="21">U</option>
+                                    <option value="22">V</option>
+                                    <option value="23">W</option>
+                                    <option value="24">X</option>
+                                    <option value="25">Y</option>
+                                    <option value="26">Z</option>
+                                    <option value="27">А</option>
+                                    <option value="28">Б</option>
+                                    <option value="29">В</option>
+                                    <option value="30">Г</option>
+                                    <option value="31">Д</option>
+                                    <option value="32">Е</option>
+                                    <option value="33">Ё</option>
+                                    <option value="34">Ж</option>
+                                    <option value="35">З</option>
+                                    <option value="36">И</option>
+                                    <option value="37">Й</option>
+                                    <option value="38">#</option>
+                                </datalist>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ads__column-find">
+                        <h3 class="find__title only-desktop">Найденые объявления</h3>
+
+                        <div class="column__body">
+
+                            <!-- /.find__title -->
+
+                            <!-- /.find__sort -->
+                        </div>
+
+                        <div class="tabs">
+                            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                            <label class="left" for="tab-btn-1">По умолчанию</label>
+
+                            <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                            <label for="tab-btn-2">Новинки</label>
+
+                            <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                            <label for="tab-btn-3">Дороже</label>
+
+                            <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+                            <label class="right" for="tab-btn-4">Дешевле</label>
+
+                            <label class="close only-mobile">Закрыть</label>
+                        </div>
+
+                        <div id="New">
+
+                            @@include('_offer-proplus.html')
+                            @@include('_offer-pro.html')
+                            @@include('_offer-simple.html')
+
+
+                            <div class="super">
+                                <div class="super__header">
+                                    <div class="super__item-left">
+                                        <div class="super__icon">
+                                            <img src="img/icons/icon4.webp" alt="">
+                                        </div>
+                                        <div class="super__title">
+                                            <h4>Спецпредложения</h4>
+                                        </div>
+                                    </div>
+                                    <div class="super__item-right">
+                                        <!-- <img class="slid__spec spec__prev" src="img/icons/Vector7.png" alt=""> -->
+                                        <!-- <img src="img/icons/Rectangle84.png" alt=""> -->
+                                        <div class="v-line"></div>
+                                        <!-- <img class="slid__spec spec__next" src="img/icons/Vector8.png" alt=""> -->
+                                    </div>
+                                </div>
+
+                                <div class="super__slider">
+                                    @@include('_offer-pro-mini.html')
+                                    @@include('_offer-pro-mini.html')
+                                    @@include('_offer-proplus-mini.html')
+                                    @@include('_offer-pro-mini.html')
+                                    @@include('_offer-pro-mini.html')
+                                    @@include('_offer-proplus-mini.html')
+                                </div>
+                            </div>
+                            <!-- /.super -->
+
+                            @@include('_offer-simple.html')
+                            @@include('_offer-simple.html')
+                            @@include('_offer-simple.html')
+
+                        </div>
+
+                        <!-- /.column__table2 -->
+
+                        <div class="ads__sort-search">
+                            <div class="sort-search__body">
+                                <dl class="sticky-list">
+                                    <!--<div id="A">
+                                        <dt>A</dt>
+                                        <div class="title-game">
+                                            <dd>
+                                                <h1>Aradeg</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Anaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Anaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Anaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Anaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Anaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div id="B">
+                                        <dt>B</dt>
+                                        <div class="title-game">
+                                            <dd>
+                                                <h1>Bradeg</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Bnaconda</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div id="C">
+                                        <dt>C</dt>
+                                        <div class="title-game">
+                                            <dd>
+                                                <h1>CS:GO</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>CS 1.6</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div id="D">
+                                        <dt>D</dt>
+                                        <div class="title-game">
+                                            <dd>
+                                                <h1>Dota 2</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Diablo 3</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <div id="E">
+                                        <dt>E</dt>
+                                        <div class="title-game">
+                                            <dd>
+                                                <h1>Edge of Eternity</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                </div>
+                                            </dd>
+                                            <dd>
+                                                <h1>Elden Ring</h1>
+                                                <div class="subtitle-game">
+                                                    <a>Аккаунты</a>
+                                                    <a>Услуги</a>
+                                                    <a>Предметы</a>
+                                                    <a>Золото</a>
+                                                    <a>Серебро</a>
+                                                    <a>Кубки</a>
+                                                </div>
+                                            </dd>
+                                        </div>
+                                    </div>-->
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="pagin">
+                            <div class="pagin__icon">
+                                <a href="#"><img src="img/icons/Vector11.webp" alt=""></a>
+                            </div>
+                            <!-- /.pagin__icon -->
+                            <div class="pagin__namber">
+                                <p>
+                                    <a href="#">1</a>
+                                    <a href="#"><span>2</span> </a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a> ...
+                                    <a href="#">22</a>
+                                </p>
+                            </div>
+                            <!-- /.pagin__namber -->
+                            <div class="pagin__icon">
+                                <a href="#"><img src="img/icons/Vector10.webp" alt=""></a>
+                            </div>
+                            <!-- /.pagin__icon -->
+                        </div>
+                        <!-- /.pagin -->
+                    </div>
+                    <!-- /.ads__column-find -->
+                    <div class="right__wrapper">
+                        <div class="find__sort only-desktop">
+                            <form class="form__sort" action="/">
+                                <div class="obj want__sell-button">
+                                    <a href="#" class="button">Подать объявление</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ads__column-search">
+                            <div class="search-line">
+                                <form action="/" class="about_search-line search-line__search">
+                                    <input type="text" placeholder="Поиск" id="autoComplete" autocomplete="off">
+                                    <button>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.33333 11.6667C9.27885 11.6667 11.6667 9.27885 11.6667 6.33333C11.6667 3.38781 9.27885 1 6.33333 1C3.38781 1 1 3.38781 1 6.33333C1 9.27885 3.38781 11.6667 6.33333 11.6667Z"
+                                                stroke="#83859C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M12.9996 13L10.0996 10.1" stroke="#83859C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="mobile_header only-mobile">
+                            <div class="find__title_mobile">
+                                <h3>Найденые объявления</h3>
+                            </div>
+
+                            <div class="button_mobile">
+                                <div class="button_mobile--filter">
+                                    <span>Фильтры</span>
+                                    <img src="img/svg/filter.svg" alt="filter">
+                                </div>
+                                <div class="obj button_mobile--add button-o-mobile">
+                                    <a>Подать объявление</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- /.ads__column-search -->
+                        <div class="selection__price">
+                            <div class="selection__cross only-mobile">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+                                        transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+                                    <rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+                                        fill="#323232">
+                                    </rect>
+                                </svg>
+                            </div>
+                            <div class="selection__price-title only-mobile">
+                                <h3>Фильтр</h3>
+                            </div>
+                            <div class="selection__price-container">
+
+                                <div class="selection__price-title">
+                                    <p>Цена</p>
+                                    <!-- , <span>₽</span> -->
+                                </div>
+                                <!-- /.selection__price-title -->
+                                <div class="price__items">
+                                    <input type="text" class="price__item1" placeholder="От" value="`${max}`">
+                                    <input type="text" class="price__item2" placeholder="До" value="300">
+                                </div>
+                                <!-- /.price__items -->
+
+                                <div id="slider-range"></div>
+
+                                <!-- /.price__slider -->
+                                <div class="types__ads">
+                                    <hr class="ads__search-line">
+                                    <form class="form__types" action="/">
+                                        <div class="types">
+                                            <p class="types__title">Тип объявления</p>
+                                            <div class="checkbox-standard">
+                                                <input checked type="checkbox" id="type1">
+                                                <label for="type1">Аккаунты</label>
+                                            </div>
+                                            <div class="checkbox-standard">
+                                                <input type="checkbox" id="type2">
+                                                <label for="type2">Предметы</label>
+                                            </div>
+                                            <div class="checkbox-standard">
+                                                <input type="checkbox" id="type3">
+                                                <label for="type3">Услуги</label>
+                                            </div>
+                                            <div class="checkbox-standard">
+                                                <input type="checkbox" id="type4">
+                                                <label for="type4">Прочее</label>
+                                            </div>
+                                        </div>
+                                        <div class="enter">
+                                            <input type="submit" class="button-o" value="Применить">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.types__ads -->
+                            </div>
+                        </div>
+                        <!-- /.selection__price -->
+                    </div>
+                    <!-- /.right__wrapper -->
+                </div>
+                <!-- /.ads__columns -->
+            </div>
+            <!-- /.ads__container container -->
+        </div>
+
+        <!-- Footer Start-->
+        @@include('_footer.html')
+        <!-- Footer End-->
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/pluginSearchInput.min.js"></script>
+    <script src="js/pluginSelect.min.js"></script>
+
+    <script>
+        $(".chose-game-select").select2({
+            placeholder: "Выберите игру",
+            dropdownParent: $('.chose-game')
+        });
+    </script>
+
+    <script>
+        var minValue = 0;
+        var maxValue = 10000;
+        var gameList = ["Aradeg", "Anaconda", "Bradeg", "CS:GO", "CS:1.6", "CS:1.6", "CS:1.6", "CS:1.6"];
+
+        document.querySelector('.price__item1').value = minValue;
+        document.querySelector('.price__item2').value = maxValue;
+
+
+
+        // autoCompleteJS.data.src.map(i => {e = document.createElement("li"); e.innerText = i; return e})
+        // var spisok = document.createElement("ul")
+        // var ready = spisok.replaceChildren(...autoCompleteJS.data.src.map(i => {e = document.createElement("li"); e.innerText = i; return e}))
+
+
+        document.body.querySelector(".chose-game-select").innerHTML = `${gameList.map(i => `<option value="${i}">${i}</li>`).join("")}`;
+
+        document.body.querySelector("dl.sticky-list").innerHTML = `<div id="A"> <dt>A</dt> <div class="title-game"> ${gameList.filter(i => /^a/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="B"> <dt>B</dt> <div class="title-game"> ${gameList.filter(i => /^b/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="C"> <dt>C</dt> <div class="title-game"> ${gameList.filter(i => /^c/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="D"> <dt>D</dt> <div class="title-game"> ${gameList.filter(i => /^d/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="E"> <dt>E</dt> <div class="title-game"> ${gameList.filter(i => /^e/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="F"> <dt>F</dt> <div class="title-game"> ${gameList.filter(i => /^f/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="G"> <dt>G</dt> <div class="title-game"> ${gameList.filter(i => /^g/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="H"> <dt>H</dt> <div class="title-game"> ${gameList.filter(i => /^h/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="I"> <dt>I</dt> <div class="title-game"> ${gameList.filter(i => /^i/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="J"> <dt>J</dt> <div class="title-game"> ${gameList.filter(i => /^j/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="K"> <dt>K</dt> <div class="title-game"> ${gameList.filter(i => /^k/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="L"> <dt>L</dt> <div class="title-game"> ${gameList.filter(i => /^l/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="M"> <dt>M</dt> <div class="title-game"> ${gameList.filter(i => /^m/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="N"> <dt>N</dt> <div class="title-game"> ${gameList.filter(i => /^n/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="O"> <dt>O</dt> <div class="title-game"> ${gameList.filter(i => /^o/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="P"> <dt>P</dt> <div class="title-game"> ${gameList.filter(i => /^p/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Q"> <dt>Q</dt> <div class="title-game"> ${gameList.filter(i => /^q/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="R"> <dt>R</dt> <div class="title-game"> ${gameList.filter(i => /^r/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="S"> <dt>S</dt> <div class="title-game"> ${gameList.filter(i => /^s/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="T"> <dt>T</dt> <div class="title-game"> ${gameList.filter(i => /^t/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="U"> <dt>U</dt> <div class="title-game"> ${gameList.filter(i => /^u/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="V"> <dt>V</dt> <div class="title-game"> ${gameList.filter(i => /^v/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="W"> <dt>W</dt> <div class="title-game"> ${gameList.filter(i => /^w/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="X"> <dt>X</dt> <div class="title-game"> ${gameList.filter(i => /^x/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Y"> <dt>Y</dt> <div class="title-game"> ${gameList.filter(i => /^y/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Z"> <dt>Z</dt> <div class="title-game"> ${gameList.filter(i => /^z/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="А"> <dt>А</dt> <div class="title-game"> ${gameList.filter(i => /^а/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Б"> <dt>Б</dt> <div class="title-game"> ${gameList.filter(i => /^б/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="В"> <dt>В</dt> <div class="title-game"> ${gameList.filter(i => /^в/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Г"> <dt>Г</dt> <div class="title-game"> ${gameList.filter(i => /^г/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Д"> <dt>Д</dt> <div class="title-game"> ${gameList.filter(i => /^д/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Е"> <dt>Е</dt> <div class="title-game"> ${gameList.filter(i => /^е/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Ё"> <dt>Ё</dt> <div class="title-game"> ${gameList.filter(i => /^ё/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Ж"> <dt>Ж</dt> <div class="title-game"> ${gameList.filter(i => /^ж/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="З"> <dt>З</dt> <div class="title-game"> ${gameList.filter(i => /^з/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="И"> <dt>И</dt> <div class="title-game"> ${gameList.filter(i => /^и/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+        document.body.querySelector("dl.sticky-list").insertAdjacentHTML('beforeend', `<div id="Й"> <dt>Й</dt> <div class="title-game"> ${gameList.filter(i => /^й/i.exec(i)).map(i => `<dd> <h1>${i}</h1> <div class="subtitle-game"> <a>Аккаунты</a> <a>Услуги</a> <a>Предметы</a> <a>Золото</a> <a>Серебро</a> </div> </dd>`).join("")} </div>`);
+    </script>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/ads.min.js"></script>
+</body>
+
+</html>

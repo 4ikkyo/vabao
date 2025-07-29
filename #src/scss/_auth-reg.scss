@@ -1,0 +1,322 @@
+.auth-reg {
+    &__container {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items        : center;
+        align-items          : center;
+        height               : 100vh;
+        overflow             : hidden;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            height               : initial;
+            overflow             : initial;
+            padding              : 63px 0;
+        }
+
+        .auth-reg__form {
+            form {
+                display       : flex;
+                flex-direction: column;
+                max-width     : 398px;
+                margin-bottom : 135px;
+                margin        : 0 auto 135px;
+                @include adaptiv-value("width", 398, 300, 1);
+
+                @media (max-width: 992px) {
+                    margin-bottom: 64px;
+                }
+
+                .auth-reg__title {
+                    margin-bottom: 30px;
+
+                    h1 {
+                        font-weight: 700;
+                        font-size  : 68px;
+                        line-height: 82px;
+                        margin     : 0;
+                        color      : #2B2B43;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size  : 18px;
+                        line-height: 20px;
+                        color      : #545563;
+                    }
+                }
+
+                .form-group {
+                    display       : flex;
+                    flex-direction: column;
+
+                    label {
+                        display      : flex;
+                        font-weight  : 600;
+                        font-size    : 20px;
+                        line-height  : 16px;
+                        margin-bottom: 10px;
+                        color        : #545563;
+                    }
+
+                    .input-login,
+                    .input-password,
+                    .input-password-confirm,
+                    .input-email {
+                        position: relative;
+                        width   : 100%;
+
+                        input {
+                            border       : 3px solid #C7C8D2;
+                            border-radius: 8px;
+                            width        : 100%;
+                            height       : 50px;
+                            padding      : 15px 12px;
+                            box-sizing   : border-box;
+
+                            &:focus {
+                                transition  : 0.3s ease-in-out;
+                                border-color: #0081FE;
+                                outline     : none;
+                            }
+                        }
+
+                        .password-hide {
+                            position   : absolute;
+                            top        : 0;
+                            bottom     : 0;
+                            margin     : auto 0;
+                            right      : 18px;
+                            display    : flex;
+                            align-items: center;
+
+                            &::before {
+                                content: url('../img/svg/eye-hide.svg');
+                                height : 22px;
+                            }
+
+                            &.view::before {
+                                content: url('../img/svg/eye.svg');
+                                height : 22px;
+                            }
+                        }
+
+                    }
+
+                    .login,
+                    .email,
+                    .password,
+                    .password-confirm {
+                        margin-bottom: 20px;
+                        position     : relative;
+
+                        &:nth-last-child(-n + 2) {
+                            margin-bottom: 25px;
+                        }
+
+                        span {
+                            position    : absolute;
+                            display     : none;
+                            font-weight : 600;
+                            font-size   : 15px;
+                            line-height : 20px;
+                            color       : rgba(255, 0, 0, 0.7);
+                            padding-left: 10px;
+                        }
+                    }
+
+                    .check-remember {
+                        margin-bottom: 32px;
+                    }
+
+                    .checkbox-standard {
+                        label {
+                            @include adaptiv-value("font-size", 19, 14, 1);
+
+                            &::before {
+                                @include adaptiv-value("width", 25, 21, 1);
+                                @include adaptiv-value("height", 25, 21, 1);
+                                border: 3px solid #D6D8DB;
+
+                                @media (max-width: 992px) {
+                                    border: 2px solid #D6D8DB;
+                                }
+                            }
+
+                            a {
+                                font-weight    : 700;
+                                font-size      : inherit;
+                                line-height    : 20px;
+                                color          : #0081FE;
+                                text-decoration: none;
+                                margin-left    : 5px;
+                            }
+                        }
+
+                        input:checked+label:before {
+                            content         : "";
+                            background      : url(../img/svg/checked.svg) no-repeat center center;
+                            background-color: #0081FE;
+                            border          : 2px solid #0081FE;
+                        }
+                    }
+
+                }
+
+                .button-v2 {
+                    width        : 100%;
+                    height       : 50px;
+                    margin-bottom: 28px;
+                    font-weight  : 700;
+                    font-size    : 20px;
+                    line-height  : 20px;
+                }
+
+                .forgot-password {
+                    font-weight    : 700;
+                    font-size      : 20px;
+                    line-height    : 20px;
+                    text-align     : center;
+                    color          : #0081FE;
+                    text-decoration: none;
+                }
+            }
+
+            .second-form {
+                display       : flex;
+                flex-direction: column;
+
+                .sign-in-soc-network {
+                    border         : 2px solid #0081FE;
+                    border-radius  : 6px;
+                    display        : flex;
+                    justify-content: space-evenly;
+                    width          : 291px;
+                    height         : 61px;
+                    align-items    : center;
+                    align-self     : center;
+                    margin-bottom  : 40px;
+
+                    @media (max-width: 992px) {
+                        width : 228px;
+                        height: 47px;
+                    }
+
+                    >h3 {
+                        font-weight: 700;
+                        font-size  : 20px;
+                        line-height: 20px;
+                        color      : #2B2B43;
+                        text-align : center;
+
+                        @media (max-width: 992px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    >a {
+                        img {
+                            vertical-align: bottom;
+
+                            @media (max-width: 992px) {
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .link-registration {
+                    font-weight: 400;
+                    @include adaptiv-value("font-size", 22, 16, 1);
+                    line-height: 20px;
+                    text-align : center;
+                    white-space: nowrap;
+
+                    a {
+                        font-weight: 700;
+                        @include adaptiv-value("font-size", 22, 16, 1);
+                        line-height    : 20px;
+                        color          : #0081FE;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .auth-reg__img {
+            height: 100vh;
+            width : 50vw;
+
+            // .slick-list {
+            //     position  : relative;
+            //     display   : block;
+            //     overflow  : hidden;
+            //     overflow-x: clip;
+            //     margin    : 0;
+            //     padding   : 0;
+            //     height    : 100vh !important;
+            // }
+
+            .slick-dots {
+                position  : absolute;
+                bottom    : 7%;
+                list-style: none;
+                display   : block;
+                text-align: center;
+                padding   : 0;
+                margin    : 0;
+                width     : 100%;
+
+                li {
+                    position: relative;
+                    display : inline-block;
+                    height  : 20px;
+                    width   : 20px;
+                    padding : 0;
+                    cursor  : pointer;
+
+                    button {
+                        border     : 0;
+                        background : transparent;
+                        display    : block;
+                        height     : 20px;
+                        width      : 20px;
+                        outline    : none;
+                        line-height: 0px;
+                        font-size  : 0px;
+                        color      : transparent;
+                        padding    : 5px;
+                        cursor     : pointer;
+
+                        &::before {
+                            position               : absolute;
+                            top                    : 0;
+                            left                   : 0;
+                            content                : "•";
+                            width                  : 30px;
+                            height                 : 30px;
+                            font-family            : "slick";
+                            font-size              : 30px;
+                            line-height            : 20px;
+                            text-align             : center;
+                            color                  : white;
+                            opacity                : 0.3;
+                            -webkit-font-smoothing : antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+
+                        &[aria-selected="true"]::before {
+                            color  : white;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            img {
+                vertical-align: bottom;
+                width         : 50vw !important;
+            }
+        }
+    }
+}

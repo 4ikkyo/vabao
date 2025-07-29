@@ -1,0 +1,273 @@
+.history {
+    display    : flex;
+    align-items: center;
+
+    @media (max-width: 992px) {
+        align-items: initial;
+    }
+
+    &__container {
+        background   : #FFFFFF;
+        border-radius: 15px;
+        box-shadow   : 0px 10px 35px rgba(12, 50, 123, 0.07);
+        padding      : 45px 52px;
+        max-width    : 1210px;
+        min-height   : 670px;
+
+        @media (max-width: 992px) {
+            background: none;
+            box-shadow: none;
+            padding   : 25px 20px;
+        }
+
+        .history__header {
+            display        : flex;
+            justify-content: space-between;
+            margin-bottom  : 45px;
+
+            @media (max-width: 992px) {
+                flex-direction: column;
+                align-items   : center;
+            }
+
+            .history__header-left {
+                display    : flex;
+                align-items: center;
+
+                .history__header-title {
+                    margin-right: 45px;
+
+                    h4 {
+                        font-weight: 700;
+                        font-size  : 32px;
+                        line-height: 44px;
+                    }
+                }
+
+                .history__list {
+                    position: relative;
+                    height  : 44px;
+                    width   : 192px;
+
+                    .tabs-mini {
+                        position: absolute;
+                        margin  : 0;
+
+                        label {
+                            text-align  : left;
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+
+            .history__header-right {
+                display: flex;
+
+                @media (max-width: 992px) {
+                    margin-top: 25px;
+                }
+
+                .history__balance {
+                    display      : flex;
+                    align-items  : center;
+                    border       : 2px solid #EDEEF2;
+                    border-radius: 11px;
+                    width        : 357px;
+                    height       : 57px;
+                    padding      : 0 26px 0 19px;
+                    box-sizing   : border-box;
+
+                    img {
+                        margin-right: 13px;
+                    }
+
+                    p {
+                        font-weight: 700;
+                        font-size  : 18px;
+                        line-height: 20px;
+                        color      : #2B2B43;
+                    }
+
+                    .button-v2 {
+                        margin-left: auto;
+                        width      : 88px;
+                        height     : 25px;
+                    }
+                }
+            }
+        }
+
+        .history__table {
+
+            table {
+                width        : 100%;
+                border-radius: 6px;
+                overflow     : hidden;
+
+                thead {
+                    background: #F3F6F9;
+                    height    : 45px;
+
+                    tr {
+                        th {
+                            vertical-align: middle;
+                            color         : #B5B5C3;
+                            font-weight   : 700;
+                            font-size     : 16px;
+                            line-height   : 22px;
+                        }
+
+                        .data-th {
+                            width: 15%;
+                        }
+
+                        .description-th {
+                            width       : 50%;
+                            text-align  : left;
+                            padding-left: 140px;
+                        }
+
+                        .status-th {
+                            width: 20%;
+                        }
+
+                        .sum-th {
+                            width: 15%;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        height       : 75px;
+                        border-bottom: 2px solid #EDEEF2;
+
+                        td {
+                            text-align    : center;
+                            vertical-align: middle;
+                            font-weight   : 700;
+                            font-size     : 18px;
+                            line-height   : 20px;
+                            color         : #2B2B43;
+                        }
+
+                        .description {
+                            text-align  : left;
+                            padding-left: 140px;
+
+                            a {
+                                color          : #0081FE;
+                                text-decoration: none;
+                            }
+                        }
+
+                        .sum {
+                            font-weight: 800;
+                            font-size  : 22px;
+                            line-height: 27px;
+                        }
+                    }
+
+                    tr.profit {
+
+                        .sum {
+                            color: #00A861;
+                        }
+
+                        .status {
+                            &:before {
+                                content: url('../img/svg/done.svg');
+                            }
+                        }
+                    }
+
+                    tr.processing {
+
+                        .sum {
+                            color: #9092A7;
+                        }
+
+                        .status {
+                            &:before {
+                                content: url('../img/svg/processing.svg');
+                            }
+                        }
+                    }
+
+                    tr.loss {
+                        .sum {
+                            color: #2B2B43;
+                        }
+
+                        .status {
+                            &:before {
+                                content: url('../img/svg/done.svg');
+                            }
+                        }
+                    }
+
+                    tr.withdrawal {
+                        .sum {
+                            color: #2B2B43;
+                        }
+
+                        .status {
+                            &:before {
+                                content: url('../img/svg/done.svg');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .history__list {
+            display       : flex;
+            flex-direction: column;
+            width         : fit-content;
+            margin        : 0 auto;
+
+            h4 {
+                font-weight: 700;
+                font-size  : 18px;
+                line-height: 20px;
+                margin     : 0 0 15px 10px;
+            }
+
+            .history-simple-mini,
+            .history-pro-mini,
+            .history-proplus-mini {
+                margin-bottom: 23px;
+            }
+
+            .profit {
+                .info__price {
+                    color: #00A861;
+                }
+            }
+
+            .processing {
+                .info__price {
+                    color: #9092A7;
+                }
+            }
+
+            .loss {
+                .info__price {
+                    color: #2B2B43;
+                }
+            }
+
+            .withdrawal {
+                .info__price {
+                    color: #2B2B43;
+                }
+
+                .right-column {
+                    border: 2px solid #FF342B;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+
+        .body_visible {
+            opacity: 1 !important;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer"></div>
+    <div class="wrapper">
+
+
+        <!-- Header Start-->
+        @@include('_header.html')
+        <!-- Header End-->
+
+        <div id="my-content" class="content">
+            <div class="top-bg only-desktop"></div>
+            <!-- /.top-bg -->
+            <div class="profile">
+                <div class="profile__container container">
+                    <div class="profile__titles only-desktop">
+                        <h1>Общая информация</h1>
+                        <h1>Статистика</h1>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__column-human human">
+                            <div class="profile__human">
+                                <div class="profile__human-photo">
+                                    <img src="img/comments/4.webp" alt="">
+                                    <span>Удалить</span>
+                                </div>
+                                <div class="profile__info">
+                                    <h3>Maksim</h3>
+                                    <div class="rating">
+                                        <div class="review__stars-body">
+                                            <img src="img/svg/star-none.svg">
+                                            <img src="img/svg/star-none.svg">
+                                            <img src="img/svg/star-none.svg">
+                                            <img src="img/svg/star-none.svg">
+                                            <img src="img/svg/star-none.svg">
+
+                                            <div class="review__active" style="width: 100%;">
+                                                <img src="img/svg/star-full.svg">
+                                                <img src="img/svg/star-full.svg">
+                                                <img src="img/svg/star-full.svg">
+                                                <img src="img/svg/star-full.svg">
+                                                <img src="img/svg/star-full.svg">
+                                            </div>
+                                            <div class="review__stars">
+                                                <input type="radio" class="review__star" value="1" name="rating">
+                                                <input type="radio" class="review__star" value="2" name="rating">
+                                                <input type="radio" class="review__star" value="3" name="rating">
+                                                <input type="radio" class="review__star" value="4" name="rating">
+                                                <input type="radio" class="review__star" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.5</div>
+                                    </div>
+                                    <span>Всего отзывов: 5</span>
+                                </div>
+                            </div>
+
+                            <div class="profile__statistics only-desktop">
+                                <div class="profile__number-time">
+                                    <p>Проведено времени</p>
+                                    <span>146 часов</span>
+                                </div>
+                                <div class="profile__number-reviews">
+                                    <p>Оставлено отзывов</p>
+                                    <span>14</span>
+                                </div>
+                                <div class="profile__number-time">
+                                    <p>Куплено аккаунтов</p>
+                                    <span>2</span>
+                                </div>
+                                <div class="profile__number-time">
+                                    <p>Продано аккаунтов</p>
+                                    <span>14</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile__setting">
+                            <hr class="h-line">
+                            <div class="profile__setting__container">
+                                <form class="profile__password">
+
+                                    <label for="first-pass">Изменить пароль</label>
+                                    <div class="password-1">
+                                        <input type="text" id="first-pass" name="first-pass">
+                                        <img class="password-hide" src="img/svg/eye.svg">
+                                    </div>
+
+                                    <label for="second-pass">Подтвердить пароль</label>
+                                    <div class="password-2">
+                                        <input type="text" id="second-pass" name="second-pass">
+                                        <img class="password-hide" src="img/svg/eye.svg">
+                                    </div>
+
+                                    <button type="submit" class="button-mobile glow">Изменить пароль</button>
+                                </form>
+                                <div class="notice">
+                                    <div class="push-notice">
+                                        <img src="img/svg/bell3.svg">
+                                        <div class="push-notice-text">
+                                            <h2>Push-уведомления</h2>
+                                            <p>Войдите с телефона, если хотите получать уведомления.
+                                                Работают в Chrome, Firefox, Opera и Яндекс. Браузер. На компьютерах и
+                                                Android-устройствах. Не работают на IOS.</p>
+                                        </div>
+                                        <div class="checkbox-ios">
+                                            <input type="checkbox" class="switch_1">
+                                        </div>
+                                    </div>
+                                    <div class="email-notice">
+                                        <img src="img/svg/email.svg">
+                                        <div class="push-notice-text">
+                                            <h2>Оповещения по электронной почте</h2>
+                                            <p>Приходят на почту, привязанную к учетной записи. Необходимо:
+                                                подтвердить адрес электронной почты</p>
+                                        </div>
+                                        <div class="checkbox-ios">
+                                            <input type="checkbox" class="switch_1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile__orders-moderation">
+                            <hr class="h-line only-desktop">
+
+                            <div class="profile__orders-moderation__container">
+                                <div class="profile__orders-moderation-title">
+                                    <h3>Объявления на модерации</h3>
+                                    <a class="only-desktop" href="#">Показать все</a>
+                                </div>
+
+                                <div class="profile__orders-moderation_main">
+                                    @@include('_order-profile-simple-mini.html')
+                                    @@include('_order-profile-pro-mini.html')
+                                    @@include('_order-profile-proplus-mini.html')
+                                </div>
+
+                                <a class="only-mobile" href="#">Показать все</a>
+                            </div>
+                        </div>
+
+                        <div class="profile__my-orders">
+                            <hr class="h-line">
+
+                            <div class="profile__my-orders__container">
+                                <div class="profile__my-orders-title">
+                                    <h3>Мои объявления</h3>
+                                    <a class="only-desktop" href="#">Показать все</a>
+                                </div>
+
+                                <div class="profile__my-orders_main">
+                                    @@include('_order-profile-simple-mini.html')
+                                    @@include('_order-profile-simple-mini.html')
+                                    @@include('_order-profile-proplus-mini.html')
+                                    @@include('_order-profile-pro-mini.html')
+                                    @@include('_order-profile-pro-mini.html')
+                                    @@include('_order-profile-proplus-mini.html')
+                                </div>
+
+                                <a class="only-mobile" href="#">Показать все</a>
+                            </div>
+                        </div>
+
+
+                        <div class="profile__review">
+                            <div class="profile__review-header">
+                                <div class="profile__review-item-left">
+                                    <div class="profile__review-title">
+                                        <h4>Последние отзывы</h4>
+                                    </div>
+                                    <div class="profile__review-rating only-mobile">
+                                        <div class="rating">
+                                            <div class="review__stars-body">
+                                                <img src="img/svg/star-none.svg">
+                                                <img src="img/svg/star-none.svg">
+                                                <img src="img/svg/star-none.svg">
+                                                <img src="img/svg/star-none.svg">
+                                                <img src="img/svg/star-none.svg">
+
+                                                <div class="review__active" style="width: 100%;">
+                                                    <img src="img/svg/star-full.svg">
+                                                    <img src="img/svg/star-full.svg">
+                                                    <img src="img/svg/star-full.svg">
+                                                    <img src="img/svg/star-full.svg">
+                                                    <img src="img/svg/star-full.svg">
+                                                </div>
+                                                <div class="review__stars">
+                                                    <input type="radio" class="review__star" value="1" name="rating">
+                                                    <input type="radio" class="review__star" value="2" name="rating">
+                                                    <input type="radio" class="review__star" value="3" name="rating">
+                                                    <input type="radio" class="review__star" value="4" name="rating">
+                                                    <input type="radio" class="review__star" value="5" name="rating">
+                                                </div>
+                                            </div>
+                                            <div class="rating__value">3</div>
+                                        </div>
+                                        <span>Всего: 35</span>
+                                    </div>
+                                </div>
+                                <div class="profile__review-item-right only-desktop">
+                                    <!-- <img class="slid__spec spec__prev" src="img/icons/Vector7.png" alt=""> -->
+                                    <!-- <img src="img/icons/Rectangle84.png" alt=""> -->
+                                    <div class="v-line"></div>
+                                    <!-- <img class="slid__spec spec__next" src="img/icons/Vector8.png" alt=""> -->
+                                </div>
+                            </div>
+
+                            <div class="profile__review-slider" id="slider">
+                                @@include('_user-review.html')
+                                @@include('_user-review.html')
+                                @@include('_user-review.html')
+                                @@include('_user-review.html')
+                                @@include('_user-review.html')
+                                @@include('_user-review.html')
+                            </div>
+                        </div>
+                        <!-- /.profile__column-last -->
+                    </div>
+                    <!-- /.profile__row -->
+                    </div.>
+                    <!-- /.profile__container -->
+                </div>
+                <!-- /.profile -->
+            </div>
+            <!-- /.content -->
+            <!-- Footer Start-->
+            @@include('_footer.html')
+            <!-- Footer End-->
+            <!-- Footer End-->
+        </div>
+        <!-- /.wrapper -->
+
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <script>
+            var divs = $(".profile__review-slider > div");
+            var j = 0;
+            for (let i = 0; i < divs.length; i += 3) {
+                j = j + 1;
+                divs.slice(i, i + 3).wrapAll("<div class='slide-" + j + "'></div>");
+            }
+        </script>
+</body>
+
+</html>

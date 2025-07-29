@@ -1,0 +1,127 @@
+.content {
+    .rules {
+        margin-top: 55px;
+
+        &__container {
+            margin-bottom: 66px;
+
+            .rules_title {
+                font-weight  : 700;
+                font-size    : 36px;
+                line-height  : 49px;
+                margin-bottom: 28px;
+            }
+
+            .rules__text {
+                font-weight: 500;
+                font-size  : 15px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .violation {
+        margin-bottom: 195px;
+        position     : relative;
+
+        &::before {
+            content   : '';
+            z-index   : -2;
+            width     : 100%;
+            background: #F4F7FB;
+            position  : absolute;
+            height    : 275px;
+        }
+
+        &__container {
+            position: relative;
+            top     : 60px;
+
+            .violation__columns {
+                padding      : 35px 0 45px 0;
+                background   : #FFFFFF;
+                border-radius: 15px;
+                box-shadow   : 0px 10px 35px rgba(12, 50, 123, 0.07);
+
+                .violation__title {
+                    font-weight: 700;
+                    font-size  : 25px;
+                    line-height: 34px;
+                    text-align : center;
+                    padding    : 45px 0 30px 0;
+                }
+
+                .violation__subtitle-row {
+                    display: flex;
+
+                    .violation__subtitle-left,
+                    .violation__subtitle-right {
+                        padding-left  : 45px;
+                        padding-bottom: 15px;
+                        font-style    : normal;
+                        font-weight   : 600;
+                        font-size     : 17px;
+                        line-height   : 21px;
+                        letter-spacing: 0.02em;
+                        color         : #323232;
+                    }
+
+                    .violation__subtitle-left {
+                        flex: 1 1 65%;
+                    }
+
+                    .violation__subtitle-right {
+                        flex: 1 1 35%;
+                    }
+                }
+
+                .violation__row {
+                    display   : flex;
+                    border-top: 1px solid #CBDAF8;
+
+                    &:last-of-type {
+                        border-bottom: 1px solid #CBDAF8;
+                    }
+
+                    .column__violation {
+                        flex: 1 1 65%;
+                    }
+
+                    .vl {
+                        border-left: 1px solid #CBDAF8;
+                        max-height : 250px;
+                        margin     : 20px 0;
+                    }
+
+                    .column_sanctions {
+                        flex: 1 1 35%;
+                    }
+
+                    .violation__text {
+                        padding       : 30px 45px;
+                        font-style    : normal;
+                        font-weight   : normal;
+                        font-size     : 15px;
+                        line-height   : 18px;
+                        letter-spacing: 0.02em;
+                    }
+                }
+
+                .taboo__body {
+                    color      : #323232;
+                    font-size  : 17px;
+                    line-height: 20px;
+                    font-weight: bold;
+                    padding    : 25px;
+                }
+            }
+
+            .violation__for-seller {
+                .violation__title {
+                    padding-top: 0;
+                }
+            }
+
+        }
+    }
+}

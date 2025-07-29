@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VABAO</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/update.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer bg_index"></div>
+
+    <!-- Header Start-->
+    <header id="header" class="header header-false">
+    <div class="header__container max-container">
+        <div class="header__left-nav">
+
+            <div class="header__menu-burger menu-burger-add">
+                <span></span>
+            </div>
+            <div class="header__menu-burger menu-burger-smart">
+                <span></span>
+            </div>
+
+            <ul class="header__left-menu only-less-768">
+                <li class="only-desktop"><a href="#">О сервисе</a></li>
+                <li><a href="ads.html">Купить</a></li>
+                <li><a href="rules.html">Продать</a></li>
+            </ul>
+        </div>
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/svg/logo2.svg" alt="logo">
+            </a>
+        </div>
+
+        <div class="header__right-nav">
+
+            <div class="header__balance only-less-768">
+                <a>1000 руб</a>
+            </div>
+
+            <div class="header__bell menu-bell-add only-less-768">
+                <div class="circle">1</div>
+                <!-- Круг с числом уведомлений -->
+                <a>
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Знак колокольчика -->
+                        <path
+                            d="M 10.578125 1.464844 C 7.515625 1.910156 5.207031 4.019531 4.457031 7.050781 L 4.34375 7.523438 L 4.3125 10.738281 C 4.285156 13.914062 4.277344 14.058594 4.128906 14.335938 C 4.0625 14.460938 3.027344 15.957031 2.78125 16.285156 C 2.164062 17.101562 2.402344 18.164062 3.296875 18.578125 L 3.527344 18.6875 L 7.941406 18.6875 L 8.039062 19.011719 C 9.074219 22.410156 13.933594 22.414062 14.960938 19.011719 L 15.058594 18.6875 L 19.472656 18.6875 L 19.703125 18.578125 C 20.597656 18.164062 20.835938 17.105469 20.21875 16.285156 C 19.972656 15.957031 18.9375 14.460938 18.871094 14.335938 C 18.722656 14.058594 18.714844 13.914062 18.6875 10.738281 L 18.65625 7.523438 L 18.542969 7.050781 C 17.847656 4.242188 15.859375 2.253906 13.074219 1.585938 C 12.613281 1.476562 11.03125 1.398438 10.578125 1.464844 M 12.488281 2.996094 C 14.5625 3.34375 16.316406 4.882812 16.953125 6.910156 C 17.210938 7.734375 17.21875 7.804688 17.246094 11.207031 C 17.28125 15.035156 17.167969 14.53125 18.386719 16.285156 L 19.046875 17.226562 L 15.273438 17.238281 C 13.199219 17.246094 9.800781 17.246094 7.726562 17.238281 L 3.957031 17.226562 L 4.628906 16.261719 C 5.3125 15.289062 5.492188 14.988281 5.640625 14.578125 C 5.71875 14.371094 5.726562 14.109375 5.753906 11.207031 C 5.777344 8.53125 5.792969 8.003906 5.855469 7.660156 C 6.445312 4.503906 9.34375 2.464844 12.488281 2.996094 M 13.453125 18.789062 C 13.308594 19.265625 12.667969 19.839844 12.085938 20.007812 C 11.097656 20.296875 9.816406 19.679688 9.546875 18.789062 L 9.515625 18.6875 L 13.484375 18.6875 L 13.453125 18.789062 ">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header__search only-desktop">
+                <a>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 7.5 0.0234375 C 2.234375 0.679688 -1.132812 5.738281 0.328125 10.804688 C 1.554688 15.0625 6.019531 17.648438 10.371094 16.621094 C 11.480469 16.359375 12.910156 15.667969 13.632812 15.046875 L 13.769531 14.925781 L 16.269531 17.421875 C 18.992188 20.136719 18.863281 20.023438 19.296875 19.992188 C 19.726562 19.960938 20 19.660156 20 19.226562 C 20 18.847656 20.023438 18.875 17.402344 16.25 L 14.925781 13.769531 L 15.046875 13.632812 C 15.289062 13.347656 15.753906 12.597656 15.996094 12.101562 C 18.429688 7.050781 15.4375 1.164062 9.90625 0.113281 C 9.484375 0.03125 7.90625 -0.0234375 7.5 0.0234375 M 9.453125 1.664062 C 14.574219 2.449219 16.976562 8.441406 13.828125 12.578125 C 10.734375 16.640625 4.339844 15.917969 2.214844 11.265625 C -0.0429688 6.335938 4.09375 0.847656 9.453125 1.664062 ">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__support only-desktop">
+                <a href="request.html">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 19.984375 1.726562 C 19.902344 1.75 18.90625 2.125 17.769531 2.558594 C -0.960938 9.707031 0.648438 9.078125 0.335938 9.378906 C -0.289062 9.984375 -0.03125 10.894531 0.867188 11.273438 C 1.015625 11.335938 2.015625 11.640625 3.089844 11.945312 C 4.160156 12.25 5.042969 12.507812 5.046875 12.511719 C 5.050781 12.519531 5.535156 13.898438 6.121094 15.574219 C 6.703125 17.253906 7.234375 18.722656 7.296875 18.839844 C 7.828125 19.816406 8.992188 20.085938 9.894531 19.4375 C 10.019531 19.351562 10.65625 18.785156 11.316406 18.179688 C 11.972656 17.574219 12.523438 17.074219 12.539062 17.070312 C 12.554688 17.066406 13.371094 17.707031 14.351562 18.5 C 16.246094 20.027344 16.507812 20.203125 17.007812 20.285156 C 17.734375 20.398438 18.410156 20.023438 18.738281 19.316406 C 18.980469 18.800781 22.007812 3.730469 21.988281 3.136719 C 21.957031 2.046875 21.058594 1.417969 19.984375 1.726562 M 20.667969 3.238281 C 20.667969 3.460938 17.648438 18.417969 17.546875 18.683594 C 17.351562 19.207031 17.445312 19.265625 13.75 16.289062 C 12.035156 14.910156 10.632812 13.777344 10.628906 13.777344 C 10.625 13.773438 12.144531 12.152344 14.003906 10.175781 C 15.867188 8.199219 17.414062 6.523438 17.445312 6.449219 C 17.574219 6.132812 17.386719 5.6875 17.074219 5.585938 C 16.761719 5.480469 16.675781 5.519531 13.75 7.015625 C 6.679688 10.632812 5.53125 11.214844 5.484375 11.214844 C 5.410156 11.21875 1.71875 10.164062 1.71875 10.140625 C 1.71875 10.128906 3.957031 9.265625 6.691406 8.21875 C 9.429688 7.175781 13.601562 5.582031 15.960938 4.679688 C 21.074219 2.726562 20.667969 2.851562 20.667969 3.238281 M 13.527344 8.710938 C 13.46875 8.777344 12.445312 9.863281 11.257812 11.125 C 10.070312 12.390625 9.074219 13.484375 9.039062 13.554688 C 9.007812 13.625 8.796875 14.441406 8.570312 15.363281 C 8.347656 16.28125 8.148438 17.070312 8.132812 17.113281 C 8.109375 17.164062 7.820312 16.390625 7.242188 14.730469 C 6.769531 13.378906 6.402344 12.265625 6.425781 12.257812 C 6.449219 12.25 8.070312 11.425781 10.035156 10.421875 C 11.996094 9.417969 13.609375 8.597656 13.617188 8.59375 C 13.628906 8.59375 13.589844 8.648438 13.527344 8.710938 M 10.753906 15.601562 C 11.136719 15.910156 11.453125 16.175781 11.457031 16.191406 C 11.460938 16.207031 10.960938 16.683594 10.347656 17.246094 C 9.730469 17.8125 9.238281 18.238281 9.25 18.191406 C 9.261719 18.148438 9.445312 17.421875 9.652344 16.574219 C 9.859375 15.730469 10.039062 15.039062 10.046875 15.039062 C 10.054688 15.039062 10.371094 15.292969 10.753906 15.601562 ">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <!-- <div class="header__account-login">
+                <button>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="black"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 8.949219 0.34375 C 6.679688 0.839844 5.480469 2.824219 5.796875 5.546875 C 6.117188 8.285156 7.613281 9.714844 10.175781 9.71875 C 12.789062 9.726562 14.214844 8.039062 14.222656 4.925781 C 14.226562 2.402344 13.210938 0.847656 11.25 0.375 C 10.722656 0.246094 9.46875 0.230469 8.949219 0.34375 M 10.726562 1.824219 C 12.085938 2.113281 12.722656 3.097656 12.722656 4.925781 C 12.722656 7.015625 11.90625 8.144531 10.324219 8.234375 C 8.367188 8.347656 7.136719 6.835938 7.265625 4.476562 C 7.367188 2.53125 8.816406 1.421875 10.726562 1.824219 M 6.8125 10.300781 C 6.75 10.328125 6.457031 10.488281 6.164062 10.65625 C 5.484375 11.050781 4.371094 11.585938 3.511719 11.929688 C 2.734375 12.242188 2.554688 12.367188 2.347656 12.726562 C 1.730469 13.804688 1.535156 16.601562 2.015625 17.410156 C 3.347656 19.636719 10.746094 20.480469 15.449219 18.941406 C 17.925781 18.132812 18.535156 17.15625 18.171875 14.601562 C 17.9375 12.945312 17.574219 12.398438 16.425781 11.972656 C 15.789062 11.738281 14.40625 11.070312 13.601562 10.609375 C 12.929688 10.21875 12.746094 10.175781 12.421875 10.332031 C 12.074219 10.492188 11.929688 11.050781 12.136719 11.410156 C 12.339844 11.753906 14.757812 13.003906 16.214844 13.515625 C 16.550781 13.636719 16.875 15.527344 16.703125 16.359375 C 16.472656 17.464844 12.257812 18.445312 8.773438 18.203125 C 6.445312 18.042969 4.089844 17.402344 3.425781 16.746094 L 3.273438 16.597656 L 3.277344 15.738281 C 3.277344 13.988281 3.421875 13.605469 4.179688 13.304688 C 5.507812 12.777344 7.507812 11.71875 7.710938 11.433594 C 8.132812 10.84375 7.488281 10.03125 6.8125 10.300781 " />
+                    </svg>
+                </button>
+            </div> -->
+            <div class="header__account__logo_user">
+                <a>
+                    <img src="img/svg/user_icon.svg" alt="user_logo">
+                </a>
+            </div>
+        </div>
+        <!-- <div class="header__separator"></div> -->
+    </div>
+
+    <div class="header__additional-menu-all">
+        <div class="header__right-additional-menu invisible">
+            <ul class=" ">
+                <li class="text-align-center pb pb20"><a href="request.html">Тех.поддержка</a></li>
+                <li class="text-align-center pb pb10"><a href="#">Оставить отзыв</a></li>
+            </ul>
+
+            <div class="header__additional-menu__social">
+                <ul>
+                    <li class="social social__inst">
+                        <a href="#"><img src="img/svg/inst.svg" alt=""></a>
+                    </li>
+                    <li class="social">
+                        <a href="#"><img src="img/svg/vk2.svg" alt=""></a>
+                    </li>
+                    <li class="social">
+                        <a href="#"><img src="img/svg/fb.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header__additional-menu-bell invisible">
+            <div class="head__additional-menu-bell">
+                <p>Уведомления</p>
+            </div>
+            <div class="border-bell"></div>
+            <ul class="d-flex">
+                <li class="text-align-center pb pb20">
+                    <div class="circle">4</div><a href=""> У вас новое сообщение</a>
+                </li>
+                <!-- <li class="text-align-center pb pb20"><p> У вас нет сообщений</p></li> -->
+            </ul>
+        </div>
+
+        <div class="header__left-additional-menu invisible">
+            <div class="header__background"></div>
+            <ul>
+                <li class="only-more-768">
+                    <a href="#">
+                        <img src="img/svg/add.svg">
+                    </a>
+                    <div class="header__balance">
+                        <a>1000 руб</a>
+                    </div>
+                </li>
+                <li><a href="profile.html">Мой профиль</a></li>
+                <li><a href="history.html">Мои операции</a></li>
+                <li><a href="mymassages.html">Сообщения</a> <span class="circle">1</span></li>
+                <!-- <li><a href="rules.html">Покупки</a></li>
+                <li><a href="#">Продажи</a></li>
+                <li><a href="#">Финансы</a></li> -->
+                <li><a href="profile.html">Настройки</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="auth.html">Выйти</a></li>
+            </ul>
+        </div>
+
+        <div class="header__search-menu invisible">
+            <div class="header__search-menu__background"></div>
+            <div class="header__search-menu__container">
+                <div class="header__search-menu__cross">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.305603" y="12.5424" width="17.7069" height="1.47558"
+                            transform="rotate(-45 0.305603 12.5424)" fill="#323232"></rect>
+                        <rect x="1.0434" width="17.7069" height="1.47558" transform="rotate(45 1.0434 0)"
+                            fill="#323232">
+                        </rect>
+                    </svg>
+                </div>
+                <div class="search-line">
+                    <form action="/" class="about_search-line search-line__search">
+                        <input type="text" placeholder="Поиск" autocomplete="off">
+                        <button href=>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.33333 11.6667C9.27885 11.6667 11.6667 9.27885 11.6667 6.33333C11.6667 3.38781 9.27885 1 6.33333 1C3.38781 1 1 3.38781 1 6.33333C1 9.27885 3.38781 11.6667 6.33333 11.6667Z"
+                                    stroke="#83859C" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.9996 13L10.0996 10.1" stroke="#83859C" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="top-search">
+                    <h1>Популярные запросы</h1>
+                    <ul>
+                        <li><a href="#">Counter-Strike: GO</a></li>
+                        <li><a href="#">Grand Theft Auto V</a></li>
+                        <li><a href="#">League of Legends</a></li>
+                        <li><a href="#">World of Tanks</a></li>
+                        <li><a href="#">PUBG</a></li>
+                        <li><a href="#">Minecraft</a></li>
+                        <li><a href="#">Dota 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>;
+    <!-- Header End-->
+
+    <main id="main" style="max-width: 1258px; margin: 0 auto; margin-bottom:250px">
+        <section class="support__subsection-header">
+            <div class="container support__subsection-header-container">
+                <div class="support__subsection-header-first">
+                    <a href="support-main.html"></a>
+                    <img src="img/svg/arrow2.svg" alt="" style="transform: rotate(180deg);">
+                    <h1>Назад</h1>
+                </div>
+                <div class="support__search">
+                    <input type="text" name="ads__search" placeholder="Введите запрос">
+                    <a class="button_a">Поиск</a>
+                </div>
+            </div>
+        </section>
+        <hr class="only-pc">
+        <section class="support__chapter">
+            <div class="container" style="display:inherit">
+                <div style="width: 100%">
+                    <h1
+                        style="text-align: center; font-weight: 600; font-size: clamp(26px, 4vw, 36px); line-height: 49px;">
+                        Сроки выполнения заказа</h1>
+                    <div class="support__subtitles">
+                        <p style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 33px;">
+                            Предполагается, что покупатель и продавец обсуждают сроки выполнения заказа самостоятельно,
+                            перед совершением сделки.<br>
+                            <br>
+                            Написать продавцу перед оплатой очень важно, поскольку продавцов часто нет на месте, и в
+                            случае оплаты без предупреждения вам придется либо ожидать продавца, либо обратиться в
+                            службу поддержки для возврата денежных средств.<br>
+                            <br>
+                            Если никакой договоренности по срокам между покупателем и продавцом нет, то при разрешении
+                            какого-либо спора или конфликтной ситуации мы принимаем решение исходя из среднего времени
+                            выполнения аналогичных заказов на нашей площадке и здравого смысла.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="button_a">Напиши нам</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Start-->
+    <footer id="footer" class="footer">
+    <div class="footer__first-line">
+        <div class="footer__container container">
+            <div class="footer__title">
+                <a href="index.html" class="logo">
+                    <img src="img/svg/logo2.svg" alt="logo">
+                </a>
+                <p>Сервис для безопасной покупки и продажи цифровых товаров</p>
+                <div class="footer___social-networks">
+                    <img src="img/svg/facebook1.svg" alt="">
+                    <img src="img/svg/twitter1.svg" alt="">
+                    <img src="img/svg/instagram1.svg" alt="">
+                    <img src="img/svg/in1.svg" alt="">
+                    <img src="img/svg/youtube1.svg" alt="">
+                </div>
+            </div>
+            <div class="footer__menu">
+                <dl class="footer__buy">
+                    <dt>Купить</dt>
+                    <dd>Аккаунты</dd>
+                    <dd>Предметы</dd>
+                    <dd>Услуги</dd>
+                </dl>
+
+                <dl class="footer__sell">
+                    <dt>Продать</dt>
+                    <dd>Правила</dd>
+                    <dd>Как начать</dd>
+                    <dd>О сервисе</dd>
+                </dl>
+
+                <dl class="footer__support">
+                    <dt>Поддержка</dt>
+                    <dd>Центр помощи</dd>
+                    <dd>Частые вопросы</dd>
+                    <dd>Тех.поддержка</dd>
+                </dl>
+
+                <dl class="footer__contact">
+                    <dt>Контакты</dt>
+                    <div class="footer__mail">
+                        <img src="img/svg/mail.svg" alt="">
+                        <dd>vabao@mail.ru</dd>
+                    </div>
+                    <div class="footer__phone">
+                        <img src="img/svg/phone.svg" alt="">
+                        <dd>(978) 503-77-97</dd>
+                    </div>
+                </dl>
+
+                <!-- <ul class="d-flex align-items-center">
+                        <li><a href="index.html">О сайте </a></li>
+                        <li><a href="ads.html">Купить</a></li>
+                        <li><a href="rules.html">Продать</a></li>
+                        <li><a href="license.html">Правила</a></li>
+                        <li><a href="request.html">Тех. поддержка</a></li>
+                    </ul> -->
+            </div>
+        </div>
+    </div>
+    <hr class="footer__line">
+    <div class="footer__second-line">
+        <div class="footer__container container">
+            <span class="footer__protected only-desktop">2022 © Все права защищены | <a>Правила сообщества</a> | <a>Политика кон-ти</a></span>
+            <span class="footer__protected only-mobile">2022 © Все права защищены | <a>Правила сообщества</a></span>
+        </div>
+    </div>
+</footer>;
+    <!-- Footer End-->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        $('.search-line__search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.search-line__search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VABAO</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="img/svg/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/update.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer bg_index"></div>
+
+    <!-- Header Start-->
+    @@include('_header.html');
+    <!-- Header End-->
+
+    <main id="main" style="max-width: 1258px; margin: 0 auto; margin-bottom:250px">
+        <section class="support__subsection-header">
+            <div class="container support__subsection-header-container">
+                <div class="support__subsection-header-first">
+                    <a href="support-main.html"></a>
+                    <img src="img/svg/arrow2.svg" alt="" style="transform: rotate(180deg);">
+                    <h1>Назад</h1>
+                </div>
+                <div class="support__search">
+                    <input type="text" name="ads__search" placeholder="Введите запрос">
+                    <a class="button_a">Поиск</a>
+                </div>
+            </div>
+        </section>
+        <hr class="only-pc">
+        <section class="support__chapter">
+            <div class="container" style="display:inherit">
+                <div style="width: 100%">
+                    <h1
+                        style="text-align: center; font-weight: 600; font-size: clamp(26px, 4vw, 36px); line-height: 49px;">
+                        Вывод средств</h1>
+                    <div class="support__subtitles">
+                        <p style="font-weight: 400; font-size: clamp(16px, 3vw, 24px); line-height: 33px;">Для вывода
+                            денежных средств достаточно нажать кнопку «вывести». После этого в истории операций появится
+                            незавершённая операция вывода.
+                            <br>
+                            <br>
+                            Обратите внимание на то, что вывод денежных средств обычно занимает 48 часов, но бывают
+                            исключения.
+                            <br>
+                            <br>
+                            На момент написания этой статьи, Vabao поддерживает вывод денег в следующие платежные
+                            системы:
+                            <br>
+                            <br>
+                            <b style="font-weight: bold;">Яндекс.Деньги</b> — ваш кошелёк должен иметь статус «Именной»
+                            или «Идентифицированный».<br>
+                            <b style="font-weight: bold;">QIWI</b> — ваш кошелёк должен иметь статус «Основной» или
+                            «Профессиональный».<br>
+                            <b style="font-weight: bold;">Webmoney.</b><br>
+                            <b style="font-weight: bold;">Банковские карты</b> (VISA, MasterCard и «Мир») — ограничения
+                            по странам и банкам отсутствуют. Если карта номинирована в валюте отличной от валюты вывода,
+                            то обмен производится по курсу вашего банка. На момент написания этой статьи исключение
+                            составляет Украина: вывод денежных средств в Украину возможен только на карты,
+                            номинированные в украинской гривне, при этом обмен производится по внутреннему курсу
+                            платежной системы.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="button_a">Напиши нам</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Start-->
+    @@include('_footer.html');
+    <!-- Footer End-->
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        $('.search-line__search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.search-line__search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Объявления</title>
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+    <meta name="Keywords" content="keyword, keyword, keyword">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/update.css">
+    <link rel="stylesheet" href="css/powerange.min.css">
+    <link rel="stylesheet" href="css/ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <style>
+        body {
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+    </style>
+
+    <script>
+        //!Скрипт плавного перехода между страницами
+        setTimeout(function () {
+            $('body').addClass('body_visible');
+        }, 500);
+    </script>
+
+    <noscript>
+        <!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+        <style>
+            .body_hide {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="bg-layer"></div>
+    <div class="wrapper">
+        <!-- Header Start-->
+        @@include('_header.html');
+        <!-- Header End-->
+
+        <main class="main-traning">
+            <div class="blue-back-line"></div>
+            <section class="traning">
+                <div class="traning__container">
+                    <!-- Start -->
+                    <div class="traning__container-top">
+                        <div class="traning__container-top__progress-bar">
+                            <!-- <div class="traning__progress-bar step1"></div>
+                            <div class="traning__progress-bar step2"></div>
+                            <div class="traning__progress-bar step3"></div>
+                            <div class="traning__progress-bar step4"></div>
+                            <div class="traning__progress-bar step5"></div> -->
+                        </div>
+                        <h1 class="stage only-pc">Этап 0</h1>
+                        <a href="">Пропустить</a>
+                    </div>
+                    <h1 class="stage only-mobile">Этап 0</h1>
+                    <div class="regular">
+                        <div class="step0">
+                            <div class="traning__container-center">
+                                <img src="img/svg/cat0.svg" width="123" height="123">
+                                <h1>Привет! Меня зовут Добби и я расскажу как происходит покупка</h1>
+                            </div>
+                        </div>
+                        <div class="step1">
+                            <div class="traning__container-center">
+                                <h1>Обсуждение сделки и оплата товара</h1>
+                                <img src="img/icons/credit-card.png" width="188" height="188">
+                            </div>
+                        </div>
+                        <div class="step2">
+                            <div class="traning__container-center">
+                                <h1>Резервирование <br> средств системой</h1>
+                                <img src="img/icons/shield2.png" width="152" height="152">
+                            </div>
+                        </div>
+                        <div class="step3">
+                            <div class="traning__container-center">
+                                <h1>Выполнение продавцом обязательств</h1>
+                                <img src="img/icons/handshake.png" width="181" height="180">
+                            </div>
+                        </div>
+                        <div class="step4">
+                            <div class="traning__container-center">
+                                <h1 style="white-space: nowrap;">Подтверждение получения <br> товара или открытие спора
+                                </h1>
+                                <img src="img/icons/checked.png" width="153" height="153">
+                            </div>
+                        </div>
+                        <div class="step5">
+                            <div class="traning__container-center">
+                                <h1>Зачисление средств <br> на счет продавца</h1>
+                                <img src="img/icons/money-bag.png" width="188" height="188">
+                            </div>
+                        </div>
+                        <div class="step6">
+                            <div class="traning__container-center">
+                                <h1>Мурздравляяю! Теперь ты готов. Если что пиши <img
+                                        style="right: 15px; position: relative;" src="img/icons/love.png" width="59"
+                                        height="59" align="right"></h1>
+                                <img src="img/svg/cat6.svg" width="135" height="135">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traning__container-bottom">
+                        <div class="traning__container-bottom-info" id="info"
+                            style="opacity: 0; transition: 0.5s ease;">
+                            <img src="" width="86" height="86">
+                            <p></p>
+                        </div>
+                        <!-- <div id="button" class="button-next"
+                            style="position: absolute; left: 0; right: 0; justify-content: center; transition: 0.5s ease; transform: translate(0px, -95px);">
+                        </div> -->
+                        <div id="button" class="button-next">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Start-->
+        <!-- @@include('_footer.html'); -->
+        <!-- Footer End-->
+    </div>
+    <!-- /.wrapper -->
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="js/powerange.min.js"></script>
+    <script src="js/ui/jquery-ui.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/comments-slider.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/skroll.js"></script>
+
+
+
+    <script>
+        $('.sort select').ready(function () {
+            $('.sort select').niceSelect();
+
+            var removed = false;
+            $('.nice-select').click(function () {
+                if (!removed) {
+                    $(this).find('ul li').get(0).remove();
+                    removed = true;
+                }
+            })
+
+        })
+
+
+        $(function () {
+
+
+            new Splide('.splide').mount();
+            new Splide('.spl_pc').mount();
+            // splide.mount();
+
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [50, 300],
+                slide: function (event, ui) {
+
+                    $('.price__item1').val(ui.values[0]);
+                    $('.price__item2').val(ui.values[1]);
+                    $('.ui-slider-handle').eq(0).css("background", "#FFFFFF !important");
+                }
+            });
+
+
+            $("#slider-range2").slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [50, 300],
+                slide: function (event, ui) {
+
+                    $('.price__item1').val(ui.values[0]);
+                    $('.price__item2').val(ui.values[1]);
+                    $('.ui-slider-handle').eq(0).css("background", "#FFFFFF !important");
+                }
+            });
+
+            $('.ui-slider-handle').eq(3).css("background", "#FFFFFF !important");
+
+            $('.button_mobile--filter').on('click', function () {
+
+                $('.selection__price').toggleClass('logIn-form-active');
+                $('.header__additional-menu3').toggleClass('logIn-form__lining-visible');
+            })
+
+            $('.logIn-form__cross').on('click', function () {
+                $('.selection__price').removeClass('logIn-form-active');
+                $('.header__additional-menu3').removeClass('logIn-form__lining-visible');
+            });
+
+        });
+
+        $('.ads__column-search input').keyup(function () {
+
+            $('.serch_text').show();
+            $(this).css('border-radius', '3px 3px 0 0');
+        })
+
+        $('.ads__column-search input').blur(function () {
+            $(this).css('border-radius', '3px2');
+            $('.serch_text').hide();
+        })
+
+        $(".regular").slick({
+            speed: 400,
+            // fade: true,
+            // cssEase: 'linear',
+            lazyLoad: 'ondemand',
+            draggable: false,
+            swipe: false,
+            dots: true,
+            infinite: false,
+            arrows: true,
+            appendArrows: '.button-next',
+            nextArrow: '<a class="button_a button-index glow button-next" style="cursor: pointer;">Далее</a>',
+            prevArrow: '<br>',
+            appendDots: '.traning__container-top__progress-bar',
+            dotsClass: 'traning__container-top__progress-bar',
+        });
+    </script>
+
+    <script>
+        function windowSize() {
+            windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
+            windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+        }
+        windowSize();
+
+        var x = document.getElementsByClassName('traning__container-top__progress-bar')[0].getElementsByTagName('li')
+        for (var i = 0; i < x.length; i++) {
+            if (x[i] === x[0] || x[i] === x[6]) {
+                x[i].classList.add("invisible");
+                console.log(x[i]);
+            }
+            x[i].classList.add("traning__progress-bar");
+            x[i].classList.add("denyclick");
+            x[i].querySelector("button").innerHTML = "";
+            x[i].querySelector("button").style.width = "100%";
+            x[i].querySelector("button").style.height = "100%";
+            x[i].classList.add("step" + i);
+        }
+
+        for (var i = 0; i < x.length; ++i) {
+            x[i].onclick = (function (val) {
+                return function () {
+                    for (var i = 0; i < x.length; i++) {
+                        if (x[i].classList.contains('traning__progress-bar_checked') && val < i) {
+                            x[i].style.setProperty("background", "#8fb5ff", "important");
+                        }
+                        if (x[i].classList.contains('traning__progress-bar_checked') && val >= i) {
+                            x[i].removeAttribute("style");
+                        }
+                    }
+                    return console.log(val);
+                }
+            })
+                (i);
+        }
+
+        if (windowWidth > 992) {
+            if ($('.step0').parents('.slick-slide').hasClass('slick-active')) {
+                $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(calc(50% - 106px), -95px)', transition: 'all 0.5s ease 0s' })
+                $('.stage.only-pc').css({ display: 'none' });
+                $('.button-next').children('a').html('Ок, Добби');
+            }
+        } else {
+            if ($('.step0').parents('.slick-slide').hasClass('slick-active')) {
+                $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -60px)' })
+                $('.stage.only-mobile').css({ display: 'none' });
+                $('.button-next').children('a').html('Ок, Добби');
+            }
+        }
+
+        $('.button-next, .traning__progress-bar').click(function () {
+            windowSize();
+            if (windowWidth > 992) {
+                if ($('.step1').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage.only-pc').css({ display: 'block' });
+                    $('.stage').html("Этап 1");
+                    $('.traning__container-top__progress-bar').children('.step1').addClass('traning__progress-bar_checked');
+                    $('.traning__container-top__progress-bar').children('.step1').removeClass('denyclick');
+                    $('.traning__container-top__progress-bar').children('.step1').removeAttr('style');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat1.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Для начала напиши продавцу, <br>и уточни основные моменты</p>');
+                    $('.traning__container-bottom #info').css({ opacity: 1 })
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                    $('.button-next').children('a').html('Далее');
+                } else if ($('.step2').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 2");
+                    $('.traning__container-top__progress-bar').children('.step2').addClass('traning__progress-bar_checked');
+                    $('.traning__container-top__progress-bar').children('.step2').removeClass('denyclick');
+                    $('.traning__container-top__progress-bar').children('.step2').removeAttr('style');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat2.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После оплаты деньги под защитой, <br>даже мышка не проскочит, а жаль...</p>');
+                } else if ($('.step3').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 3");
+                    $('.traning__container-top__progress-bar').children('.step3').addClass('traning__progress-bar_checked');
+                    $('.traning__container-top__progress-bar').children('.step3').removeClass('denyclick');
+                    $('.traning__container-top__progress-bar').children('.step3').removeAttr('style');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat3.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Продавец увидит уведомление <br> в чате об оплате и передаст данные</p>');
+                } else if ($('.step4').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 4");
+                    $('.traning__container-top__progress-bar').children('.step4').addClass('traning__progress-bar_checked');
+                    $('.traning__container-top__progress-bar').children('.step4').removeClass('denyclick');
+                    $('.traning__container-top__progress-bar').children('.step4').removeAttr('style');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat4.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После клацнешь по кнопке подтвердить<br>или мои коготки войдут в дело...</p>');
+                } else if ($('.step5').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 5");
+                    $('.traning__container-top__progress-bar').children('.step5').addClass('traning__progress-bar_checked');
+                    $('.traning__container-top__progress-bar').children('.step5').removeClass('denyclick');
+                    $('.traning__container-top__progress-bar').children('.step5').removeAttr('style');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat5.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('Мы на финише! Когда подтвердил получение<br>товара средства зачислятся на счет продавца');
+                } else if ($('.step6').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("");
+                    $('.traning__container-top').children('a').replaceWith('<img src=img/icons/checked2.png width="46" height="46">');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(calc(50% - 106px), -20px)' });
+                    $('.traning__container-bottom #info').css({ opacity: 0 });
+                    $('.button-next').empty();
+                    $('.button-next').html('<a class="button_a button-index glow button-next" style="cursor: pointer; font-size: 20px!important;">Спасибо, Добби</a>');
+                }
+            } else {
+                if ($('.step1').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage.only-mobile').css({ display: 'block' });
+                    $('.stage').html("Этап 1");
+                    $('.traning__container-top__progress-bar').children('.step1').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat1.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Для начала напиши продавцу, и уточни основные моменты</p>');
+                    $('.traning__container-bottom #info').css({ opacity: 1 })
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)', 'padding-bottom': 'clamp(0px, calc(21vh - 140px), 20px)' });
+                    $('.button-next').children('a').html('Далее');
+                } else if ($('.step2').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 2");
+                    $('.traning__container-top__progress-bar').children('.step2').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat2.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После оплаты деньги под защитой, даже мышка не проскочит, а жаль...</p>');
+                } else if ($('.step3').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 3");
+                    $('.traning__container-top__progress-bar').children('.step3').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat3.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Продавец увидит уведомление в чате об оплате и передаст данные</p>');
+                } else if ($('.step4').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 4");
+                    $('.traning__container-top__progress-bar').children('.step4').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat4.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После клацнешь по кнопке <b style="font-weight: 700;color: #000000;">подтвердить</b> или мои коготки войдут в дело...</p>');
+                    // $('.step4').children('.traning__container-center').children('h1').html('Подтверждение получения товара или <br> открытие спора');
+                } else if ($('.step5').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 5");
+                    $('.traning__container-top__progress-bar').children('.step5').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat5.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('Мы на финише! Далее средства зачислятся на счет продавца');
+                } else if ($('.step6').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("");
+                    $('.traning__container-top').children('a').replaceWith('<img src=img/icons/checked2.png width="46" height="46">');
+                    $('.stage.only-mobile').css({ display: 'none' });
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -60px)' });
+                    $('.traning__container-bottom #info').css({ opacity: 0 });
+                    $('.button-next').empty();
+                    $('.button-next').html('<a class="button_a button-index glow button-next" style="cursor: pointer;">Спасибо, Добби</a>');
+                    $('.step6').children('.traning__container-center').children('h1').html('<h1 style="font-size: 30px; margin-top:40px">Мурздравляяю!</h1><h2 style="padding-top:9px; margin: 0 auto; width: max-content; font-family: Nunito;">Теперь ты готов.<br>Если что пиши <img src="img/icons/love.png" width="24" height="24" align="right"> </h2>');
+                    $('.button-next>.button-next').attr('style', 'width: 200px !important; height: 50px !important');
+                }
+            }
+        });
+
+        $(window).resize(function () {
+            function windowSize() {
+                windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
+                windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
+            }
+            windowSize();
+
+            if (windowWidth > 992) {
+                $('.stage.only-mobile').css({ display: 'none' });
+                $('.stage.only-pc').css({ display: 'block' });
+                if ($('.step0').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(calc(50% - 106px), -95px)', transition: 'all 0.5s ease 0s' })
+                } else if ($('.step1').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 1");
+                    $('.traning__container-top__progress-bar').children('.step1').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat1.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Для начала напиши продавцу, <br>и уточни основные моменты</p>');
+                    $('.traning__container-bottom #info').css({ opacity: 1 })
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                } else if ($('.step2').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 2");
+                    $('.traning__container-top__progress-bar').children('.step2').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat2.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После оплаты деньги под защитой, <br>даже мышка не проскочит, а жаль...</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                } else if ($('.step3').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 3");
+                    $('.traning__container-top__progress-bar').children('.step3').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat3.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Продавец увидит уведомление <br> в чате об оплате и передаст данные</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                } else if ($('.step4').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 4");
+                    $('.traning__container-top__progress-bar').children('.step4').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat4.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После клацнешь по кнопке подтвердить<br>или мои коготки войдут в дело...</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                } else if ($('.step5').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 5");
+                    $('.traning__container-top__progress-bar').children('.step5').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat5.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('Мы на финише! Когда подтвердил получение<br>товара средства зачислятся на счет продавца');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(75%, 0px)' });
+                } else if ($('.step6').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("");
+                    $('.traning__container-top').children('a').replaceWith('<img src=img/icons/checked2.png width="46" height="46">');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(calc(50% - 106px), -20px)' });
+                    $('.traning__container-bottom #info').css({ opacity: 0 });
+                    $('.button-next').empty();
+                    $('.button-next').html('<a class="button_a button-index glow button-next" style="cursor: pointer; font-size: 20px!important;">Спасибо, Добби</a>');
+                    // $('.step6').children('.traning__container-center').children('h1').html(' <h1>Мурздравляяю! Теперь ты готов. Если что пиши <img src="img/icons/love.png" width="59" height="59" align="right"> </h1> ');
+                    $('.step6').children('.traning__container-center').html(' <h1>Мурздравляяю! Теперь ты готов. Если что пиши <img style="right: 15px; position: relative;" src="img/icons/love.png" width="59" height="59" align="right"></h1>  <img src="img/svg/cat6.svg" width="139" height="139">');
+                }
+            } else {
+                $('.stage.only-mobile').css({ display: 'block' });
+                $('.stage.only-pc').css({ display: 'none' });
+                if ($('.step0').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -60px)' })
+                    $('.stage.only-mobile').css({ display: 'none' });
+                    $('.button-next').children('a').html('Ок, Добби');
+                } else if ($('.step1').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 1");
+                    $('.traning__container-top__progress-bar').children('.step1').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat1.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Для начала напиши продавцу, и уточни основные моменты</p>');
+                    $('.traning__container-bottom #info').css({ opacity: 1 })
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)', 'padding-bottom': 'clamp(0px, calc(21vh - 140px), 20px)' });
+                } else if ($('.step2').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 2");
+                    $('.traning__container-top__progress-bar').children('.step2').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat2.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После оплаты деньги под защитой, даже мышка не проскочит, а жаль...</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)' });
+                } else if ($('.step3').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 3");
+                    $('.traning__container-top__progress-bar').children('.step3').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat3.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>Продавец увидит уведомление в чате об оплате и передаст данные</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)' });
+                } else if ($('.step4').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 4");
+                    $('.traning__container-top__progress-bar').children('.step4').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat4.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('<p>После клацнешь по кнопке <b style="font-weight: 700;color: #000000;">подтвердить</b> или мои коготки войдут в дело...</p>');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)' });
+                    // $('.step4').children('.traning__container-center').children('h1').html('Подтверждение получения товара или <br> открытие спора');
+                } else if ($('.step5').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("Этап 5");
+                    $('.traning__container-top__progress-bar').children('.step5').addClass('traning__progress-bar_checked');
+                    $('.traning__container-bottom').children('div').children('img').attr('src', 'img/svg/cat5.svg');
+                    $('.traning__container-bottom').children('div').children('p').html('Мы на финише! Далее средства зачислятся на счет продавца');
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -105px)' });
+                } else if ($('.step6').parents('.slick-slide').hasClass('slick-active')) {
+                    $('.stage').html("");
+                    $('.traning__container-top').children('a').replaceWith('<img src=img/icons/checked2.png width="46" height="46">');
+                    $('.stage.only-mobile').css({ display: 'none' });
+                    $('.traning__container-bottom').children('.button-next').css({ transform: 'translate(0px, -60px)' });
+                    $('.traning__container-bottom #info').css({ opacity: 0 });
+                    $('.button-next').empty();
+                    $('.button-next').html('<a class="button_a button-index glow button-next" style="cursor: pointer; ">Спасибо, Добби</a>');
+                    $('.step6').children('.traning__container-center').children('h1').html('<h1 style="font-size: 30px; margin-top:40px">Мурздравляяю!</h1><h2 style="padding-top:9px; margin: 0 auto; width: max-content; font-family: Nunito;">Теперь ты готов.<br>Если что пиши <img src="img/icons/love.png" width="24" height="24" align="right"> </h2>');
+                    $('.button-next>.button-next').attr('style', 'width: 200px !important; height: 50px !important');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var skroll = new Skroll()
+            .add(".anim8", {
+                animation: "fadeInDown",
+                delay: 75,
+                duration: 150,
+                triggerBottom: 1,
+                easing: "cubic-bezier(0.37, 0.27, 0.24, 1.26)"
+            })
+            .init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Финансы</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/update.css">
+	<link rel="stylesheet" type="text/css" href="css/nice-select.css">
+
+	<style>
+		body {
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+	</style>
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<div class="bg-layer"></div>
+	<div class="wrapper">
+
+		<!-- Header Start-->
+		@@include('_header.html');
+		<!-- Header End-->
+
+
+
+		<div class="content">
+			<div class="orderopen vvg">
+				<div class="orderopen__container container finance_container">
+
+					<!-- header-link-pc -->
+					<div class="finance_container_header">
+
+						<div class="finance_container_header--title">Финансы</div>
+
+						<div class="find__sort">
+							<form class="form__sort" action="#">
+								<div class="sort">
+									<select name="sort">
+										<option value="default">По умолчанию</option>
+										<option value="old__top">Все операции</option>
+										<option value="new__top">Вывод</option>
+										<option value="old__top">Пополнение</option>
+
+									</select>
+								</div>
+							</form>
+						</div>
+
+						<div class="finance_container_header--border"></div>
+						<div class="finance_container_header--balance">Баланс: 550 руб.</div>
+						<a href="#">
+							<div class="finance_container_header--add">Пополнить</div>
+						</a>
+						<div class="finance_container_header--border2"></div>
+						<a href="#">
+							<div class="finance_container_header--give">Вывести</div>
+						</a>
+					</div>
+
+					<!-- /header-link-pc -->
+					<!-- header-link-mobile -->
+					<div class="finance_container_header__mob">
+						<div class="finance_container_header--title">Финансы</div>
+						<div class="finance_container_header--balance">Баланс: 550 руб.</div>
+
+						<div class="img_im">
+							<div>
+								<img class="img_im--minus" src="img/svg/open_order.svg" alt="">
+							</div>
+							<div> <img class="img_im--plus" src="img/svg/open_order.svg" alt=""></div>
+						</div>
+					</div>
+					<!-- /header-link-mobile -->
+
+
+					<!-- items-mobile -->
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
+								Завершенно
+							</div>
+						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Заказ <span>#6799111</span></p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end2">
+								Завершенно
+							</div>
+						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Пополнение баланса</p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end3">
+								Завершенно
+							</div>
+						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Вывод средств</p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="history_row-table--mobile finance--mobile">
+						<div class="history_row-table--mobile--top">
+							<div class="history_row-table--mobile--order">
+								<span>Описание операции</span>
+
+							</div>
+							<div class="history_row-table--mobile--status history_row-table--mobile--status--end1">
+								Завершенно
+							</div>
+						</div>
+						<div class="history_row-table--mobile--body">
+
+							<div class="history_row-table--mobile--body--right">
+								<div class="history_row-table--mobile--body--right--data">
+									<span>Дата:</span>
+									23 февраля 20:45
+								</div>
+								<div class="history_row-table--mobile--body--right--balance">
+									<p class="unit__maxnew">Заказ <span>#6799111</span></p>
+								</div>
+								<div class="history_row-table--mobile--body--right--price">
+									<span>Сумма</span>
+									320 ₽
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="show__more--reviews">
+						<a href="#">Показать еще</a>
+					</div>
+					<!-- /items-mobile -->
+
+
+					<!-- items-pc -->
+					<div class="finance_container_body">
+						<div class="history__row-markers">
+							<div class="markers__date markers">
+								<p>Дата</p>
+							</div>
+
+							<div class="markers__description markers">
+								<p>Описание</p>
+							</div>
+
+							<div class="markers__status markers">
+								<p>Статус</p>
+							</div>
+							<div class="markers__sum markers">
+								<p>Сумма</p>
+							</div>
+						</div>
+
+						<div class="history_row-table">
+							<div class="unit__date unit">
+								<p class="unit__max">1 февраля 20:45</p>
+								<p class="unit__mini">4 месяца назад</p>
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__order unitnew">
+									<p class="unit__maxnew">заказ<br>#6799111</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__date -->
+
+
+							<!-- /.unit__order -->
+							<div class="vl3 vl-second"></div>
+							<div class="unit__description unit unit__description_finance">
+								<p class="unit__max"> Заказ <span>№37835913 </span></p>
+
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__status unitnew">
+									<p class="status">Оплачен <span class="moneynew">11.40 ₽</span></p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__description -->
+
+
+							<!-- /.unit__seller -->
+							<div class="vl3 vl-fourth"></div>
+							<div class="unit__status unit">
+								<p class="status">Завершено</p>
+							</div>
+							<!-- /.unit__status -->
+							<div class="vl3 vl-fifth"></div>
+							<div class="unit__sum unit">
+								<p class="money">11.40 ₽ </p>
+							</div>
+							<!-- /.unit__sum -->
+						</div>
+
+
+						<div class="history_row-table">
+							<div class="unit__date unit">
+								<p class="unit__max">1 февраля 20:45</p>
+								<p class="unit__mini">4 месяца назад</p>
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__order unitnew">
+									<p class="unit__maxnew">заказ<br>#6799111</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__date -->
+
+
+							<!-- /.unit__order -->
+							<div class="vl3 vl-second"></div>
+							<div class="unit__description unit unit__description_finance">
+								<p class="unit__max"> Пополнение баланса</p>
+
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__status unitnew">
+									<p class="status">Пополнение баланса</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__description -->
+
+
+							<!-- /.unit__seller -->
+							<div class="vl3 vl-fourth"></div>
+							<div class="unit__status unit finance--green">
+								<p class="status">Завершено</p>
+							</div>
+							<!-- /.unit__status -->
+							<div class="vl3 vl-fifth"></div>
+							<div class="unit__sum unit">
+								<p class="money">11.40 ₽ </p>
+							</div>
+							<!-- /.unit__sum -->
+						</div>
+
+
+						<div class="history_row-table">
+							<div class="unit__date unit">
+								<p class="unit__max">1 февраля 20:45</p>
+								<p class="unit__mini">4 месяца назад</p>
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__order unitnew">
+									<p class="unit__maxnew">заказ<br>#6799111</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__date -->
+
+
+							<!-- /.unit__order -->
+							<div class="vl3 vl-second"></div>
+							<div class="unit__description unit unit__description_finance">
+								<p class="unit__max"> Вывод средств</p>
+
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__status unitnew">
+									<p class="status">Вывод средств</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__description -->
+
+
+							<!-- /.unit__seller -->
+							<div class="vl3 vl-fourth"></div>
+							<div class="unit__status unit finance--red">
+								<p class="status">Завершено</p>
+							</div>
+							<!-- /.unit__status -->
+							<div class="vl3 vl-fifth"></div>
+							<div class="unit__sum unit">
+								<p class="money">11.40 ₽ </p>
+							</div>
+							<!-- /.unit__sum -->
+						</div>
+
+						<div class="history_row-table">
+							<div class="unit__date unit">
+								<p class="unit__max">1 февраля 20:45</p>
+								<p class="unit__mini">4 месяца назад</p>
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__order unitnew">
+									<p class="unit__maxnew">заказ<br>#6799111</p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__date -->
+
+
+							<!-- /.unit__order -->
+							<div class="vl3 vl-second"></div>
+							<div class="unit__description unit unit__description_finance">
+								<p class="unit__max"> Заказ <span>№37835913 </span></p>
+
+								<!-- НОВАЯ ВСТАВКА -->
+								<div class="unitnew__status unitnew">
+									<p class="status">Оплачен <span class="moneynew">11.40 ₽</span></p>
+								</div>
+								<!-- / НОВАЯ ВСТАВКА -->
+							</div>
+							<!-- /.unit__description -->
+
+
+							<!-- /.unit__seller -->
+							<div class="vl3 vl-fourth"></div>
+							<div class="unit__status unit">
+								<p class="status">Завершено</p>
+							</div>
+							<!-- /.unit__status -->
+							<div class="vl3 vl-fifth"></div>
+							<div class="unit__sum unit">
+								<p class="money">11.40 ₽ </p>
+							</div>
+							<!-- /.unit__sum -->
+						</div>
+					</div>
+
+					<!-- /.orderopen__container container -->
+				</div>
+			</div>
+			<!-- /.orderopen -->
+		</div>
+		<!-- /.content -->
+		<!-- Footer Start-->
+		@@include('_footer.html')
+		<!-- Footer End-->
+	</div>
+	<!-- /.wrapper -->
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/comments-slider.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/nice-select.min.js"></script>
+
+
+
+	<script>
+		$('.sort select').ready(function () {
+			$('.sort select').niceSelect();
+
+		})
+
+	</script>
+
+
+</body>
+
+</html>

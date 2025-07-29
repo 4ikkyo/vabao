@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>История операций</title>
+	<meta name="description"
+		content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt delectus quis atque totam maiores eius, commodi ut nam perferendis quidem, eveniet aut error amet quibusdam. Nesciunt temporibus consequuntur culpa dolorum.">
+	<meta name="Keywords" content="keyword, keyword, keyword">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		body {
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+	</style>
+
+	<script>
+		//!Скрипт плавного перехода между страницами
+		setTimeout(function () {
+			$('body').addClass('body_visible');
+		}, 500);
+	</script>
+
+	<noscript>
+		<!--Когда у браузера отключены скрипты плавного перехода между страницами-->
+		<style>
+			.body_hide {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+	<div class="bg-layer"></div>
+	<div class="wrapper">
+
+		<!-- Header Start-->
+		@@include('_header.html')
+		<!-- Header End-->
+		<div class="history fullscreen">
+			<div class="history__container container">
+				<div class="history__header">
+					<div class="history__header-left">
+						<div class="history__header-title">
+							<h4>История</h4>
+						</div>
+						<div class="history__list">
+							<div class="tabs-mini">
+								<input type="radio" name="tab-btn" id="tab-btn-1" checked="">
+								<label class="default" for="tab-btn-1">По умолчанию</label>
+
+								<input type="radio" name="tab-btn" id="tab-btn-2" value="">
+								<label for="tab-btn-2">Выводы средств</label>
+
+								<input type="radio" name="tab-btn" id="tab-btn-3" value="">
+								<label for="tab-btn-3">Товары</label>
+
+								<label class="close only-mobile">Закрыть</label>
+							</div>
+						</div>
+					</div>
+					<div class="history__header-right">
+						<div class="history__balance">
+							<img src="img/svg/add.svg">
+							<p>1000 руб </p>
+							<a class="button-v2">Вывести</a>
+						</div>
+					</div>
+				</div>
+				<div class="history__table only-desktop">
+					<table>
+						<thead>
+							<tr>
+								<th class="data-th">Дата</th>
+								<th class="description-th">Описание</th>
+								<th class="status-th">Статус</th>
+								<th class="sum-th">Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="withdrawal">
+								<td class="data">23.04</td>
+								<td class="description">Снятие баланса</td>
+								<td class="status"></td>
+								<td class="sum">-334₽</td>
+							</tr>
+							<tr class="loss">
+								<td class="data">23.04</td>
+								<td class="description">Покупка товара <a href="#">#487454<a></td>
+								<td class="status"></td>
+								<td class="sum">-334₽</td>
+							</tr>
+							<tr class="processing">
+								<td class="data">23.04</td>
+								<td class="description">Оплата товара <a href="#">#487454<a></td>
+								<td class="status"></td>
+								<td class="sum">+334₽</td>
+							</tr>
+							<tr class="profit">
+								<td class="data">23.04</td>
+								<td class="description">Пополнение баланса</td>
+								<td class="status"></td>
+								<td class="sum">+334</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="history__list only-mobile">
+					<div class="history__this-time">
+						<h4>4 мая</h4>
+						<div class="processing">
+							@@include('_history-pro-mini.html')
+						</div>
+						<div class="withdrawal">
+							@@include('_history-simple-mini-balance-loss.html')
+						</div>
+					</div>
+
+					<div class="history__this-time">
+						<h4>23 февраля</h4>
+						<div class="loss">
+							@@include('_history-simple-mini.html')
+						</div>
+					</div>
+
+					<div class="history__this-time">
+						<h4>9 апреля</h4>
+						<div class="profit">
+							@@include('_history-pro-mini.html')
+						</div>
+					</div>
+
+					<div class="history__this-time">
+						<h4>1 июня</h4>
+						<div class="profit">
+							@@include('_history-simple-mini-balance-profit.html')
+						</div>
+						<div class="profit">
+							@@include('_history-proplus-mini.html')
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer Start-->
+	@@include('_footer.html')
+	<!-- Footer End-->
+
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
